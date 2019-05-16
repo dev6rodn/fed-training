@@ -1,0 +1,14 @@
+---
+id: 3
+section: 'React'
+isOverviewPage: true
+next: 'why'
+---
+
+![](../../images/react-sample.jpg 'React code')
+
+The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications. The framework itself is developed by Facebook.
+
+It's where we’re heading, but before we can get there, we have to talk about a few items first. Some of it is syntax, some of it is how the code above gets built in a way that the browser can understand.
+
+All of which will be covered in this section.
