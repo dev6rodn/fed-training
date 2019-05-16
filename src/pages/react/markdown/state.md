@@ -1,9 +1,3 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/lrkoqyj0lm?fontsize=14'
-next: 'gif-loader-functional'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">React: Managing State</h1>
 
 As is the case if most applications, there will be data that is not static and may change over time. This is where _state_ comes into play.

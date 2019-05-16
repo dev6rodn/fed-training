@@ -1,8 +1,3 @@
----
-section: 'React'
-next: 'components-intro'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Setting Up A React Application</h1>
 
 As discussed in the <a href="/learning-tracks/modern-web-development/build-process" target="_blank" rel="noopener noreferrer">supporting different environments</a> section, setting up a modern application can be quite involved to say the least 😅

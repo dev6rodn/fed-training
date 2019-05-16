@@ -1,8 +1,3 @@
----
-section: 'React'
-next: 'setup'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Why Use React</h1>
 
 As with any new tool, the first question must be the _"Why?"_. The JavaScript ecosystem is full of frontend frameworks. So in a sea of opinions, what makes React the framework of choice?

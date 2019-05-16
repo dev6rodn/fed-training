@@ -1,10 +1,3 @@
----
-id: 3
-section: 'React'
-isOverviewPage: true
-next: 'why'
----
-
 ![](../../images/react-sample.jpg 'React code')
 
 The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications. The framework itself is developed by Facebook.

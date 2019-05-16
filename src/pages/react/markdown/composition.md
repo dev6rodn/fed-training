@@ -1,9 +1,3 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/2jx937w3jy?fontsize=14'
-next: 'props'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Declarative Composition</h1>
 
 <blockquote style="font-style: italic; color: gray">

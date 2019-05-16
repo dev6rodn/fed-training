@@ -1,9 +1,3 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/o488v4rm5z?fontsize=14'
-next: 'state'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">React: Data Flow</h1>
 
 As we saw in the last section, creating static components is strikingly similar to how we write HTML. This blend of JavaScript and HTML is at the core of building rich, React components.

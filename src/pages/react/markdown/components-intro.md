@@ -1,9 +1,3 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/2439x2v9j0?fontsize=14'
-next: 'composition'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Creating Our First Components</h1>
 
 Review the above code above and comments. As noted in the comments, React can run in multiple environments. This is possible because JavaScript can run in multiple environments. By learning React, you can take advantage of an entire ecosystem of paths including:

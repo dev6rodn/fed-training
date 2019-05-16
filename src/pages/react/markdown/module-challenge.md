@@ -1,9 +1,3 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/yw6kvn18z1?fontsize=14'
-isChallenge: true
----
-
 <h1 style="text-align: center; text-decoration: underline">🚨Module Challenge: React Gif Loader🚨</h1>
 
 <h3 style="font-style: bold; text-align:center;">estimated time to completion: 1 hour</h3>
