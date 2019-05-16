@@ -1,16 +1,10 @@
----
-section: 'React'
-codesandboxUrl: 'https://codesandbox.io/embed/x3l536r82z?fontsize=14'
-next: 'module-challenge'
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">A working Gif Loader</h1>
 
 Our Gif Loader application is nearing completion. However there are still a few areas that can be tidied up. Additionally, when a user enters `searchText`, we'd like a request to the actual API to be made--without having our API Key live in code/version control.
 
 ## Lifecycle Methods
 
-![React Lifecycle](./images/react-lifecycle.jpeg)
+![React Lifecycle](../images/react-lifecycle.jpeg)
 
 Lifecycle methods are used to run code at a specific moment in the application, for example: When it first mounts, first updates, or right before it goes away.
 For a further example of lifecycle methods, especially relating to our current knowledge, feel free to checkout <a href="https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class" target="_blank">this section of the React docs</a>.
