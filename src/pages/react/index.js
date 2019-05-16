@@ -12,16 +12,12 @@ const ReactPage = ({ match }) => {
     <Route
       path={`${match.url}`}
       render={props => (
-        <main>
-          <div>
-            <RenderSubPage
-              {...props}
-              markdown={routeToRender.markdown}
-              codesandboxUrl={routeToRender.codesandboxUrl}
-              next={routeToRender.next}
-            />
-          </div>
-        </main>
+        <RenderSubPage
+          {...props}
+          markdown={routeToRender.markdown}
+          codesandboxUrl={routeToRender.codesandboxUrl}
+          next={routeToRender.next}
+        />
       )}
     />
   )
