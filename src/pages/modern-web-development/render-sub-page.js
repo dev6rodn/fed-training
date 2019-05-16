@@ -4,7 +4,7 @@ import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 
 const RenderSubPage = props => {
-  const nextPage = props.next ? `/react${props.next}` : '/'
+  const nextPage = props.next ? `/modern-web-development${props.next}` : '/'
   const [markdown, setMarkdown] = useState('')
 
   useEffect(() => {

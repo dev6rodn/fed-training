@@ -1,8 +1,3 @@
----
-section: "Modern JavaScript"
-next: "build-process"
----
-
 <h1 style="text-align: center; text-decoration: underline">Preparing for JavaScript Development</h1>
 
 JavaScript developers have historically been very keen on developing in the open and contributing their work to benefit others. Currently, the most common way of doing so is through the use of a package manager called <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">NPM</a>. NPM is a registry that contains prewritten code from other developers and is simple to get started with.

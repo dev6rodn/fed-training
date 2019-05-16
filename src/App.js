@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './pages/home'
 import ReactTrainingLayout from './pages/react'
 import JavaScriptTrainingLayout from './pages/modern-javascript'
-// import WebDevTrainingLayout from './pages/modern-web-development'
+import WebDevTrainingLayout from './pages/modern-web-development'
 
 function App() {
   return (
@@ -15,11 +15,11 @@ function App() {
         path="/modern-javascript/:page"
         component={JavaScriptTrainingLayout}
       />
-      {/* <Route
+      <Route
         exact
         path="/modern-web-development/:page"
         component={WebDevTrainingLayout}
-      /> */}
+      />
     </Router>
   )
 }

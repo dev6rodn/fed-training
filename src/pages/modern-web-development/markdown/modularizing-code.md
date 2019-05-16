@@ -1,10 +1,3 @@
----
-section: "Modern JavaScript"
-codesandboxUrl: "https://codesandbox.io/embed/o89n31k3y?expanddevtools=1&fontsize=14&hidenavigation=1"
-codesandboxTitle: "Modularizing Code"
-next: "javascript-setup"
----
-
 <h1 style="text-align: center; text-decoration: underline">Splitting Up Our Code</h1>
 
 In JavaScript, as with many other languages, keeping code split into logical files is a best-practice used to simplify our need to understand everything at one. This reduces our cognitive load, and helps in error-tracking.

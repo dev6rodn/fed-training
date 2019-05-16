@@ -12,6 +12,11 @@ const cards = [
     id: 2,
     path: '/modern-javascript/overview',
   },
+  {
+    name: 'Modern Web Development',
+    id: 3,
+    path: '/modern-web-development/overview',
+  },
 ]
 
 const TrainingCard = ({ card }) => (

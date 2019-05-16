@@ -1,11 +1,4 @@
----
-id: 2
-section: "Modern Web Development"
-isOverviewPage: true
-next: "modern-development"
----
-
-![](./images/react-sample.jpg "React code")
+![](./images/react-sample.jpg 'React code')
 
 The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications.
 
