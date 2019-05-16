@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import { fetchMarkdown } from '../../services/markdown'
+import { Link } from 'react-router-dom'
 
 const RenderSubPage = props => {
-  console.log(props)
+  const nextPage = props.next ? `/react${props.next}` : '/'
   const [markdown, setMarkdown] = useState('')
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [props.markdown])
 
   useEffect(() => {
     fetchMarkdown(props.markdown).then(markupText => setMarkdown(markupText))
@@ -26,6 +31,7 @@ const RenderSubPage = props => {
           }}
         />
       )}
+
       <section
         className="rendered-markdown"
         style={{
@@ -38,6 +44,9 @@ const RenderSubPage = props => {
         }}
       >
         <ReactMarkdown source={markdown} escapeHtml={false} />
+        <div style={{ textAlign: 'right' }}>
+          <Link to={nextPage}>Next</Link>
+        </div>
       </section>
     </section>
   )

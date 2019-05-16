@@ -14,20 +14,29 @@ export default [
     displayName: 'Overview',
     path: '/overview',
     markdown: overviewMarkdown,
+    next: '/why',
   },
   {
     id: 2,
     displayName: 'Why?',
     path: '/why',
     markdown: whyMarkdown,
+    next: '/setup',
   },
-  { id: 3, displayName: 'Setup', path: '/setup', markdown: setupMarkdown },
+  {
+    id: 3,
+    displayName: 'Setup',
+    path: '/setup',
+    markdown: setupMarkdown,
+    next: '/components-intro',
+  },
   {
     id: 4,
     displayName: 'Intro to Components',
     path: '/components-intro',
     markdown: componentsIntroMarkdown,
     codesandboxUrl: 'https://codesandbox.io/embed/2439x2v9j0?fontsize=14',
+    next: '/composition',
   },
   {
     id: 5,
@@ -35,6 +44,7 @@ export default [
     path: '/composition',
     markdown: compositionMarkdown,
     codesandboxUrl: 'https://codesandbox.io/embed/2jx937w3jy?fontsize=14',
+    next: '/props',
   },
   {
     id: 6,
@@ -42,6 +52,7 @@ export default [
     path: '/props',
     markdown: propsMarkdown,
     codesandboxUrl: 'https://codesandbox.io/embed/o488v4rm5z?fontsize=14',
+    next: '/state',
   },
   {
     id: 7,
@@ -49,6 +60,7 @@ export default [
     path: '/state',
     markdown: stateMarkdown,
     codesandboxUrl: 'https://codesandbox.io/embed/lrkoqyj0lm?fontsize=14',
+    next: '/gif-loader-functional',
   },
   {
     id: 8,
@@ -56,6 +68,7 @@ export default [
     path: '/gif-loader-functional',
     markdown: gifLoaderFunctional,
     codesandboxUrl: 'https://codesandbox.io/embed/x3l536r82z?fontsize=14',
+    next: '/module-challenge',
   },
   {
     id: 9,
