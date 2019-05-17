@@ -43,14 +43,7 @@ const RenderSubPage = props => {
           margin: '0 auto',
         }}
       >
-        <ReactMarkdown
-          source={markdown}
-          escapeHtml={false}
-          transformImageUri={uri => {
-            console.log(uri)
-            return './images/react-lifecycle.jpeg'
-          }}
-        />
+        <ReactMarkdown source={markdown} escapeHtml={false} />
         <div style={{ textAlign: 'right' }}>
           <Link to={nextPage}>Next</Link>
         </div>

@@ -1,10 +1,6 @@
----
-section: "Modern Web Development"
----
-
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Supporting Different Environments</h1>
 
-![](./images/js-webpack-babel.jpg "Modern Frontend Build Tools")
+<img src="https://s3.amazonaws.com/liendo-fed-training/js-webpack-babel.jpg" alt="Modern Frontend Build Tools">
 
 ES2015 introduced many enhancements to the JavaScript syntax. However JavaScript is meant to run in an environment, and it is up to those environments to add support. On the frontend, those environments are browsers and each browser can have varying support--if any at all for what they decide to implement. In addition, the JavaScript model for adding features has changed. Instead of a large update every ~8 years, there is now a smaller update every year. In that case, browsers may choose to skip adding features for that year all together.
 

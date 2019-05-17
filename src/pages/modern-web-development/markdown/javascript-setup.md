@@ -50,7 +50,7 @@ touch .gitignore
 Now, while in this directory, run the following command: `npm init`
 This will walk you through a series of command prompts, in which you can simply hit enter through all of them.
 
-![👆🏾Results from running npm init](./images/npm-init-sample.jpg)
+<img src="https://s3.amazonaws.com/liendo-fed-training/npm-init-sample.png" alt="Results from running npm init">
 
 **What’s important to note, is that this command sequence has now created a new file in your directory called package.json. This file showcases meta information about your application.**
 

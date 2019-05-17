@@ -1,4 +1,4 @@
-![](./images/react-sample.jpg 'React code')
+<img src="https://s3.amazonaws.com/liendo-fed-training/react-sample.jpg" alt="react code sample"/>
 
 The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications.
 

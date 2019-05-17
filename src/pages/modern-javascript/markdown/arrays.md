@@ -13,7 +13,7 @@ More often, one would find themselves iterating over all items in an array and p
 - Each function takes in as its first argument, a callback-function
 - Each function will not modify the original array, but rather return a new array, or piece of data, making it much more safe when manipulating data.
 
-<div style="background-color: #E8E8E8; padding: 10px">
+<div style="background-color: #E8E8E8; padding: 10px; margin-bottom: 20px">
 <h4>Map(2)</h4>
 
 Simply iterates over an array, the callback function takes in the following optional parameters in order and must return an item to be stored in the new array:
@@ -21,7 +21,8 @@ Simply iterates over an array, the callback function takes in the following opti
 - The object being operated on
 - The index of the object
 - The array being operated on
-  </div>
+
+</div>
 
 <h4>Filter(3)</h4>
 
@@ -39,4 +40,5 @@ Iterates over an array, the goal of this function is to reduce the contents of a
 - An accumulator which is used to track the current value
 - The item being iterated upon
 - Additionally, this function takes in a second argument after the callback. This is used as a starting point or initializer for the accumulator
-  </div>
+
+</div>

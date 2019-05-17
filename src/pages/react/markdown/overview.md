@@ -1,7 +1,5 @@
-<img src="../images/react-lifecycle.jpeg"/>
+<img src="https://s3.amazonaws.com/liendo-fed-training/react-project-sample.jpg"/>
 
-The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications. The framework itself is developed by Facebook.
+The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework developed by Facebook to build composable applications.
 
-It's where we’re heading, but before we can get there, we have to talk about a few items first. Some of it is syntax, some of it is how the code above gets built in a way that the browser can understand.
-
-All of which will be covered in this section.
+This module will focus on delivering practical knowledge in developing applications using this framework, as well as how its underlying tools can come together to deliver a rich experience.

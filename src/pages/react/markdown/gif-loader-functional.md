@@ -4,7 +4,7 @@ Our Gif Loader application is nearing completion. However there are still a few 
 
 ## Lifecycle Methods
 
-![React Lifecycle](../images/react-lifecycle.jpeg)
+<img src="https://s3.amazonaws.com/liendo-fed-training/react-lifecycle.jpeg" alt="react lifecycle"/>
 
 Lifecycle methods are used to run code at a specific moment in the application, for example: When it first mounts, first updates, or right before it goes away.
 For a further example of lifecycle methods, especially relating to our current knowledge, feel free to checkout <a href="https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class" target="_blank">this section of the React docs</a>.

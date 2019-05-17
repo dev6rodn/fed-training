@@ -21,7 +21,9 @@ function App() {
   }
   useEffect(() => {
     fetchCurrentUser().then(currentuser => {
-      if (currentuser) updateUser(currentuser)
+      if (currentuser) {
+        updateUser(currentuser)
+      }
     })
   }, [])
 
@@ -66,6 +68,7 @@ function App() {
     </Router>
   )
 }
+
 const theme = {
   ...AmplifyTheme,
   navBar: {

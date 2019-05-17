@@ -4,19 +4,19 @@ import trainingCardStyles from './trainingCard.module.scss'
 
 const cards = [
   {
-    name: 'React',
-    id: 1,
-    path: '/react/overview',
-  },
-  {
     name: 'Modern JavaScript',
-    id: 2,
+    id: 1,
     path: '/modern-javascript/overview',
   },
   {
     name: 'Modern Web Development',
-    id: 3,
+    id: 2,
     path: '/modern-web-development/overview',
+  },
+  {
+    name: 'React',
+    id: 3,
+    path: '/react/overview',
   },
 ]
 
@@ -35,14 +35,16 @@ const renderTrainingCards = cards => {
 
 const HomePage = () => {
   return (
-    <main
-      style={{
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        marginTop: '30px',
-      }}
-    >
-      {renderTrainingCards(cards)}
+    <main>
+      <section
+        style={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+          marginTop: '30px',
+        }}
+      >
+        {renderTrainingCards(cards)}
+      </section>
     </main>
   )
 }
