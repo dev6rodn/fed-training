@@ -1,4 +1,4 @@
-![](../../images/react-sample.jpg 'React code')
+<img src="../images/react-lifecycle.jpeg"/>
 
 The above image is <a href="https://reactjs.org/" target=_blank>React</a> syntax--a framework for building rich applications. The framework itself is developed by Facebook.
 

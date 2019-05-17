@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import trainingCardStyles from './trainingCard.module.scss'
 
 const cards = [
   {
@@ -20,16 +21,30 @@ const cards = [
 ]
 
 const TrainingCard = ({ card }) => (
-  <Link to={card.path}>
-    <div>{card.name}</div>
-  </Link>
+  <section>
+    <Link to={card.path} className={trainingCardStyles.link}>
+      <section className={trainingCardStyles.card}>
+        <p className={trainingCardStyles.text}>{card.name}</p>
+      </section>
+    </Link>
+  </section>
 )
 const renderTrainingCards = cards => {
   return cards.map(card => <TrainingCard key={card.id} card={card} />)
 }
 
 const HomePage = () => {
-  return <main>{renderTrainingCards(cards)}</main>
+  return (
+    <main
+      style={{
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        marginTop: '30px',
+      }}
+    >
+      {renderTrainingCards(cards)}
+    </main>
+  )
 }
 
 export default HomePage

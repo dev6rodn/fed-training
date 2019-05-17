@@ -1,0 +1,54 @@
+/* Large */
+.navigation {
+  display: flex;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(19, 18, 16), rgb(49, 49, 49));
+  height: 80px;
+
+  .nav-secondary {
+    display: flex;
+    margin: 0;
+    flex-flow: row wrap;
+    justify-content: 'flex-end';
+  }
+  .nav-item {
+    margin: 10px;
+    font-size: 1.3rem;
+    margin: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    color: gray;
+  }
+  .nav-item:hover {
+    color: orange;
+  }
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+    li a {
+      margin: 0px;
+    }
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    li a {
+      margin: 0px;
+    }
+  }
+}

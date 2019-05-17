@@ -1,0 +1,27 @@
+.link {
+  text-decoration: none;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(31, 30, 30);
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 136, 0, 0.096),
+      rgb(0, 136, 7)
+    );
+    border-radius: 10px;
+    .text {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 1.2;
+      color: whitesmoke;
+    }
+    .text:hover {
+      color: orange;
+    }
+  }
+}
