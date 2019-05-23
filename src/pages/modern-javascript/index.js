@@ -16,6 +16,7 @@ const ModernJSPage = ({ match }) => {
           {...props}
           markdown={routeToRender.markdown}
           codesandboxUrl={routeToRender.codesandboxUrl}
+          previous={routeToRender.previous}
           next={routeToRender.next}
         />
       )}

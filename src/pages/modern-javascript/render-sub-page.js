@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 
 const RenderSubPage = props => {
   const nextPage = props.next ? `/modern-javascript${props.next}` : '/'
+  const previousPage = props.previous
+    ? `/modern-javascript${props.previous}`
+    : '/'
   const [markdown, setMarkdown] = useState('')
 
   useEffect(() => {
@@ -51,7 +54,8 @@ const RenderSubPage = props => {
             return './images/react-lifecycle.jpeg'
           }}
         />
-        <div style={{ textAlign: 'right' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Link to={previousPage}>Previous</Link>
           <Link to={nextPage}>Next</Link>
         </div>
       </section>

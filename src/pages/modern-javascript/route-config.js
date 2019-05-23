@@ -24,6 +24,7 @@ export default [
     markdown: functionsMarkdown,
     codesandboxUrl:
       'https://codesandbox.io/embed/zr9wj0o6kl?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/overview',
     next: '/objects',
   },
   {
@@ -33,6 +34,7 @@ export default [
     markdown: objectsMarkdown,
     codesandboxUrl:
       'https://codesandbox.io/embed/13n0970vml?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/functions',
     next: '/arrays',
   },
   {
@@ -42,6 +44,7 @@ export default [
     markdown: arraysMarkdown,
     codesandboxUrl:
       'https://codesandbox.io/embed/3v165v805?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/objects',
     next: '/javascript-in-the-browser-1',
   },
   {
@@ -51,6 +54,7 @@ export default [
     markdown: browserJSPart1Markdown,
     codesandboxUrl:
       'https://codesandbox.io/embed/zrznv23xl?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/arrays',
     next: '/javascript-in-the-browser-2',
   },
   {
@@ -59,6 +63,7 @@ export default [
     path: '/javascript-in-the-browser-2',
     markdown: browserJSPart2Markdown,
     codesandboxUrl: 'https://codesandbox.io/embed/ypnpr0rzvv?fontsize=14',
+    previous: '/javascript-in-the-browser-1',
     next: '/async-js-1',
   },
   {
@@ -68,6 +73,7 @@ export default [
     markdown: asyncJSMarkdownPart1,
     codesandboxUrl:
       'https://codesandbox.io/embed/k35w0nv003?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/javascript-in-the-browser-2',
     next: '/async-js-2',
   },
   {
@@ -77,6 +83,7 @@ export default [
     markdown: asyncJSMarkdownPart2,
     codesandboxUrl:
       'https://codesandbox.io/embed/mm457lvjmp?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/async-js-1',
     next: '/function-composition',
   },
   {
@@ -86,6 +93,7 @@ export default [
     markdown: functionCompositionMarkdown,
     codesandboxUrl:
       'https://codesandbox.io/embed/wom9yv00jw?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/async-js-2',
     next: '/module-challenge',
   },
   {
@@ -93,6 +101,7 @@ export default [
     displayName: 'Module Challenge',
     path: '/module-challenge',
     markdown: moduleChallengeMarkdown,
+    previous: '/function-composition',
     codesandboxUrl: 'https://codesandbox.io/embed/nxk0rj5wm?fontsize=14',
   },
 ]
