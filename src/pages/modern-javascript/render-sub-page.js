@@ -46,6 +46,10 @@ const RenderSubPage = props => {
           margin: '0 auto',
         }}
       >
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Link to={previousPage}>Previous</Link>
+          <Link to={nextPage}>Next</Link>
+        </div>
         <ReactMarkdown
           source={markdown}
           escapeHtml={false}
