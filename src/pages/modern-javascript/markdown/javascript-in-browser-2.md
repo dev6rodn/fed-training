@@ -8,11 +8,11 @@ In the code example above, there is a simple form. Note that the code to generat
 
 ### Problems with traditional forms
 
-In modern application development, there is the concept of an [SPA](https://en.wikipedia.org/wiki/Single-page_application). In short, this simply means websites serve a single webpage, and rather than a request being made for additional pages, the content and url are updated, but a network request is never really made. It's essentially a clever trick to give the experience of a traditional website, while making the site appear significantly faster.
+In modern application development, there is the concept of an <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank">SPA</a>. In short, this simply means websites serve a single webpage, and rather than a request being made for additional pages, the content and url are updated, but a network request is never really made. It's essentially a clever trick to give the experience of a traditional website, while making the site appear significantly faster.
 
 Traditionally (and by default), forms _always_ make a network request when submitted, which means the page would refresh, and the new data would appear. To reiterate, in modern application development, eliminating the need to refresh the browser for data is a must.
 
-## [Event listeners](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
+## <a href='https://www.w3schools.com/jsref/met_element_addeventlistener.asp' target=_blank>Event listeners</a>
 
 Event Listeners are ways to subscribe to an action. An example of this are when an item on a webpage is `hover`ed, `click`ed, etc. Any HTML elment can have an event listener. In the context of forms, we want to listen to when it is `submit`ed. To do this, we use the `addEventListener` method. Again, this method can be attached to any HTML node. Typically, this method will take two arguments:
 

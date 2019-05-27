@@ -17,12 +17,12 @@ However, if you type in a term like `thanos` into the searchbar and hit enter, y
 
 ## Project Insight
 
-To fetch the gif data, you'll need to create an account on [giphy's platform](https://developers.giphy.com/).
+To fetch the gif data, you'll need to create an account on <a href="https://developers.giphy.com/" target="_blank">giphy's platform</a>.
 
 - Head to their site and signup/login to their service
 - Create an App, making sure to provide a name and description
 - Make sure that you are now able to view your API Key.
-  - [Review the docs](https://developers.giphy.com/docs/) on how to construct your endpoint.
+  - <a href="https://developers.giphy.com/docs/" target="_blank">Review the docs</a> on how to construct your endpoint.
 
 ## Project Tasks
 

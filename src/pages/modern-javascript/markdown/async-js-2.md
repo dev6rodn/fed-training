@@ -3,7 +3,7 @@
 ## Data Fetching with the Fetch API
 
 `fetch` is a nice way to handle http requests. If you have prior experience with
-JavaScript, you may recall using `XHR` or if you used a library like [jQuery](https://jquery.com/), there was
+JavaScript, you may recall using `XHR` or if you used a library like <a href='https://jquery.com/' target='_blank'>jQuery</a>, there was
 `$.get()`. `fetch` attempts to solve both cases of complicated configuration and needing an external library to perform network requests.
 
 With `fetch`, when a request is made, you are given back a response. That response contains things like headers, meta information, and methods that will transform the data that was given back.
@@ -14,7 +14,7 @@ This is similar to setting the content-type header. Fetch will then attempt to c
 
 ## Using Fetch
 
-`fetch` is promise-based. Using `fetch` requires a knowledge of how JavaScript Promises work. As such, this section greatly expands on the [previous section](/learning-tracks/modern-javascript/async-js-1). The first thing we'll notice is that **whatever data we return from a promise is itself wrapped in a promise**, allowing us to do "promise-chaining"
+`fetch` is promise-based. Using `fetch` requires a knowledge of how JavaScript Promises work. As such, this section greatly expands on the previous section. The first thing we'll notice is that **whatever data we return from a promise is itself wrapped in a promise**, allowing us to do "promise-chaining"
 
 For an example on how to use `fetch`, please see _code sample 1_.
 

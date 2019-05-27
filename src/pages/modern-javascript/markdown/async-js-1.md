@@ -1,4 +1,4 @@
-<h1 style="text-align: center; text-decoration: underline"><a href="https://www.udemy.com/modern-javascript/learn/lecture/9873184?start=150#overview" target="_blank">Asynchronous JavaScript: part 1</a></h1>
+<h1 style="text-align: center; text-decoration: underline">Asynchronous JavaScript: part 1</h1>
 
 ## JavaScript Waits For No One
 
@@ -6,8 +6,6 @@ What that means is that code is executed from top to
 bottom and there is no direct concept of threading.
 
 However, as we’ve seen with event-listeners, there are times when code is not executed sequentially. Additionally, when making network requests, that code takes time as well. This is known as the <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">JavaScript Event Loop</a>.
-
-`gist:mtliendo/9a6c127cfc6b239ddf551febfa8dfc58#async-callback-example.js`
 
 ### Promises
 
