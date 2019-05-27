@@ -18,6 +18,7 @@ export default [
     path: '/modern-development',
     markdown: modernDevelopmentMarkdown,
     next: '/modularizing-code',
+    previous: '/overview',
   },
   {
     id: 3,
@@ -27,6 +28,7 @@ export default [
     codesandboxUrl:
       'https://codesandbox.io/embed/o89n31k3y?expanddevtools=1&fontsize=14&hidenavigation=1',
     next: '/js-setup',
+    previous: '/modern-development',
   },
   {
     id: 4,
@@ -34,11 +36,13 @@ export default [
     path: '/js-setup',
     markdown: jsSetupMarkdown,
     next: '/build-process',
+    previous: '/modularizing-code',
   },
   {
     id: 5,
     displayName: 'Build Process Overview',
     path: '/build-process',
     markdown: buildProcessMarkdown,
+    previous: '/js-setup',
   },
 ]

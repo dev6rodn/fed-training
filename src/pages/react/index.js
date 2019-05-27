@@ -17,6 +17,8 @@ const ReactPage = ({ match }) => {
           markdown={routeToRender.markdown}
           codesandboxUrl={routeToRender.codesandboxUrl}
           next={routeToRender.next}
+          previous={routeToRender.previous}
+          routeConfig={routeConfig}
         />
       )}
     />

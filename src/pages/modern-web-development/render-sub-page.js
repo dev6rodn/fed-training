@@ -7,7 +7,7 @@ import TableOfContents from '../../components/table-of-contents'
 const RenderSubPage = props => {
   const nextPage = props.next ? `/modern-web-development${props.next}` : '/'
   const previousPage = props.previous
-    ? `/modern-web-devlopment${props.previous}`
+    ? `/modern-web-development${props.previous}`
     : '/'
   const [markdown, setMarkdown] = useState('')
 
