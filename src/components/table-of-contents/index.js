@@ -4,7 +4,11 @@ import tableOfContentStyles from './table-of-content-styles.module.scss'
 
 const TableOfContents = ({ prepend, routeConfig }) => {
   const configList = routeConfig.map(route => {
-    return <Link to={`${prepend}${route.path}`}>{route.displayName}</Link>
+    return (
+      <Link to={`${prepend}${route.path}`} key={route.id}>
+        {route.displayName}
+      </Link>
+    )
   })
   return (
     <section className={tableOfContentStyles.container}>

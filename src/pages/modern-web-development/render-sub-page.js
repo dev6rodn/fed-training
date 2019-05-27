@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
+import TableOfContents from '../../components/table-of-contents'
 
 const RenderSubPage = props => {
   const nextPage = props.next ? `/modern-web-development${props.next}` : '/'
+  const previousPage = props.previous
+    ? `/modern-web-devlopment${props.previous}`
+    : '/'
   const [markdown, setMarkdown] = useState('')
 
   useEffect(() => {
@@ -31,29 +35,39 @@ const RenderSubPage = props => {
           }}
         />
       )}
-
-      <section
-        className="rendered-markdown"
-        style={{
-          fontFamily: 'Arial, Helvetica, sans-serif',
-          fontSize: '1.3rem',
-          lineHeight: '2rem',
-          padding: '15px',
-          maxWidth: '850px',
-          margin: '0 auto',
-        }}
-      >
-        <ReactMarkdown
-          source={markdown}
-          escapeHtml={false}
-          transformImageUri={uri => {
-            console.log(uri)
-            return './images/react-lifecycle.jpeg'
-          }}
+      <section style={{ display: 'flex' }}>
+        <TableOfContents
+          prepend="/modern-web-development"
+          routeConfig={props.routeConfig}
         />
-        <div style={{ textAlign: 'right' }}>
-          <Link to={nextPage}>Next</Link>
-        </div>
+        <section
+          className="rendered-markdown"
+          style={{
+            fontFamily: 'Arial, Helvetica, sans-serif',
+            fontSize: '1.3rem',
+            lineHeight: '2rem',
+            padding: '15px',
+            maxWidth: '850px',
+            margin: '0 auto',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Link to={previousPage}>Previous</Link>
+            <Link to={nextPage}>Next</Link>
+          </div>
+          <ReactMarkdown
+            source={markdown}
+            escapeHtml={false}
+            transformImageUri={uri => {
+              console.log(uri)
+              return './images/react-lifecycle.jpeg'
+            }}
+          />
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Link to={previousPage}>Previous</Link>
+            <Link to={nextPage}>Next</Link>
+          </div>
+        </section>
       </section>
     </section>
   )
