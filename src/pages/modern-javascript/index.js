@@ -12,13 +12,16 @@ const ModernJSPage = ({ match }) => {
     <Route
       path={`${match.url}`}
       render={props => (
-        <RenderSubPage
-          {...props}
-          markdown={routeToRender.markdown}
-          codesandboxUrl={routeToRender.codesandboxUrl}
-          previous={routeToRender.previous}
-          next={routeToRender.next}
-        />
+        <>
+          <RenderSubPage
+            {...props}
+            markdown={routeToRender.markdown}
+            codesandboxUrl={routeToRender.codesandboxUrl}
+            previous={routeToRender.previous}
+            next={routeToRender.next}
+            routeConfig={routeConfig}
+          />
+        </>
       )}
     />
   )
