@@ -47,7 +47,7 @@ const RenderSubPage = props => {
             fontSize: '1.3rem',
             lineHeight: '2rem',
             padding: '15px',
-            maxWidth: '900px',
+            maxWidth: '950px',
             margin: '0 auto',
           }}
         >
