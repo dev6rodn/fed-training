@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown/with-html'
 import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 import TableOfContents from '../../components/table-of-contents'
+import PageContentStyles from './page-content.module.scss'
 
 const PageContent = props => {
   const nextPage = props.next ? `${props.urlPrefix}${props.next}` : '/'
@@ -20,44 +21,28 @@ const PageContent = props => {
   }, [props.markdown])
 
   const previousAndNextLinks = () => (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div className={PageContentStyles.navigation}>
       <Link to={previousPage}>Previous</Link>
       <Link to={nextPage}>Next</Link>
     </div>
   )
 
   return (
-    <section style={{ height: '100vh' }}>
+    <section className={PageContentStyles.container}>
       {props.codesandboxUrl && (
         <iframe
           title="composition"
           src={`${props.codesandboxUrl}`}
           frameBorder="0"
-          style={{
-            width: '100%',
-            height: '60%',
-            border: '0',
-            borderRadius: '4px',
-            overflow: 'hidden',
-          }}
+          className={PageContentStyles.codeSandbox}
         />
       )}
-      <section style={{ display: 'flex' }}>
+      <section className={PageContentStyles.content}>
         <TableOfContents
           prepend={`${props.urlPrefix}`}
           routeConfig={props.routeConfig}
         />
-        <section
-          className="rendered-markdown"
-          style={{
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            fontSize: '1.3rem',
-            lineHeight: '2rem',
-            padding: '15px',
-            maxWidth: '950px',
-            margin: '0 auto',
-          }}
-        >
+        <section className={PageContentStyles.renderedMarkdown}>
           {previousAndNextLinks()}
           <ReactMarkdown source={markdown} escapeHtml={false} />
           {previousAndNextLinks()}

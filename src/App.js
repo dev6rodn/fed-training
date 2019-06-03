@@ -69,6 +69,7 @@ function App() {
   )
 }
 
+// used to override the hosted UI for logging in
 const theme = {
   ...AmplifyTheme,
   navBar: {
