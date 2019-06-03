@@ -2,11 +2,11 @@
 
 JavaScript arrays are simply a special kind of object in the sense that it is index-based. As such, the most common use cases involve iterating over an array, and displaying a value based on an index. Arrays in JavaScript can hold any number of items, additionally, arrays may contain a mix of any JavaScript types--though this is not a pattern one will often see.
 
-### Iterating over some items
+### Iterating over _some_ items
 
 If iterating over some items in an array, a traditional for-loop is preferred (1)
 
-### Iterating over all items
+### Iterating over _all_ items
 
 More often, one would find themselves iterating over all items in an array and performing some logic on the individual item. For these situations, JavaScript has the trinity known as map/filter/reduce. These three functions are a more declarative approach to the imperative style of programming found with a for-loop. They each perform similarly and exhibit the following behaviors:
 
