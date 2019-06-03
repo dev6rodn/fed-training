@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import RenderSubPage from './render-sub-page'
 import routeConfig from './route-config'
+import PageContent from '../../components/page-content'
 
 const ReactPage = ({ match }) => {
   const routeToRender = routeConfig.find(
@@ -12,8 +12,9 @@ const ReactPage = ({ match }) => {
     <Route
       path={`${match.url}`}
       render={props => (
-        <RenderSubPage
+        <PageContent
           {...props}
+          urlPrefix="/react"
           markdown={routeToRender.markdown}
           codesandboxUrl={routeToRender.codesandboxUrl}
           next={routeToRender.next}

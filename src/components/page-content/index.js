@@ -4,10 +4,10 @@ import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 import TableOfContents from '../../components/table-of-contents'
 
-const RenderSubPage = props => {
-  const nextPage = props.next ? `/modern-web-development${props.next}` : '/'
+const PageContent = props => {
+  const nextPage = props.next ? `${props.urlPrefix}${props.next}` : '/'
   const previousPage = props.previous
-    ? `/modern-web-development${props.previous}`
+    ? `${props.urlPrefix}${props.previous}`
     : '/'
   const [markdown, setMarkdown] = useState('')
 
@@ -18,6 +18,13 @@ const RenderSubPage = props => {
   useEffect(() => {
     fetchMarkdown(props.markdown).then(markupText => setMarkdown(markupText))
   }, [props.markdown])
+
+  const previousAndNextLinks = () => (
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Link to={previousPage}>Previous</Link>
+      <Link to={nextPage}>Next</Link>
+    </div>
+  )
 
   return (
     <section style={{ height: '100vh' }}>
@@ -37,7 +44,7 @@ const RenderSubPage = props => {
       )}
       <section style={{ display: 'flex' }}>
         <TableOfContents
-          prepend="/modern-web-development"
+          prepend={`${props.urlPrefix}`}
           routeConfig={props.routeConfig}
         />
         <section
@@ -47,30 +54,17 @@ const RenderSubPage = props => {
             fontSize: '1.3rem',
             lineHeight: '2rem',
             padding: '15px',
-            maxWidth: '850px',
+            maxWidth: '950px',
             margin: '0 auto',
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Link to={previousPage}>Previous</Link>
-            <Link to={nextPage}>Next</Link>
-          </div>
-          <ReactMarkdown
-            source={markdown}
-            escapeHtml={false}
-            transformImageUri={uri => {
-              console.log(uri)
-              return './images/react-lifecycle.jpeg'
-            }}
-          />
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Link to={previousPage}>Previous</Link>
-            <Link to={nextPage}>Next</Link>
-          </div>
+          {previousAndNextLinks()}
+          <ReactMarkdown source={markdown} escapeHtml={false} />
+          {previousAndNextLinks()}
         </section>
       </section>
     </section>
   )
 }
 
-export default RenderSubPage
+export default PageContent
