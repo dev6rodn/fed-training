@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import './navbar.scss'
-import { ReactComponent as TrainingLogo } from './training-logo-white.svg'
+import { ReactComponent as TrainingLogo } from './FED-training-logo-white.svg'
 
 function Navbar({ user, handleSignOut }) {
   const username = user && user.username
@@ -11,7 +11,7 @@ function Navbar({ user, handleSignOut }) {
       <Link
         to="/"
         // activeClassName="nav-active"
-        className={'nav-primary nav-item'}
+        className="nav-primary nav-item"
       >
         <TrainingLogo className="training-logo" />
       </Link>
