@@ -13,5 +13,5 @@ export const cardsConfig = [
     name: 'React',
     id: 3,
     path: '/react/overview',
-  },
+  }
 ]
