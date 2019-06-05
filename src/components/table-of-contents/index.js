@@ -12,7 +12,7 @@ const TableOfContents = ({ prepend, routeConfig }) => {
   })
   return (
     <section className={tableOfContentStyles.container}>
-      <h4>Table of Contents</h4>
+      <h2>Table of Contents</h2>
       {configList}
     </section>
   )

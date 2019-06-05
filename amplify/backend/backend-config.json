@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"cognito4050a233": {
+		"fedtrainingbf1b0c44": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import './navbar.scss'
+import { ReactComponent as TrainingLogo } from './FED-training-logo-white.svg'
 
 function Navbar({ user, handleSignOut }) {
   const username = user && user.username
@@ -9,10 +10,10 @@ function Navbar({ user, handleSignOut }) {
     <nav className="navigation">
       <Link
         to="/"
-        activeClassName="nav-active"
-        className={'nav-primary nav-item'}
+        // activeClassName="nav-active"
+        className="nav-primary nav-item"
       >
-        <span>Home</span>
+        <TrainingLogo className="training-logo" />
       </Link>
       <div className="nav-secondary">
         <span className={'nav-item'} onClick={handleSignOut}>
