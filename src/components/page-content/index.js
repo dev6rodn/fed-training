@@ -4,6 +4,7 @@ import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 import TableOfContents from '../../components/table-of-contents'
 import PageContentStyles from './page-content.module.scss'
+import { ReactComponent as ArrowIcon } from './arrow.svg'
 
 const PageContent = props => {
   const nextPage = props.next ? `${props.urlPrefix}${props.next}` : '/'
@@ -20,10 +21,22 @@ const PageContent = props => {
     fetchMarkdown(props.markdown).then(markupText => setMarkdown(markupText))
   }, [props.markdown])
 
-  const previousAndNextLinks = () => (
-    <div className={PageContentStyles.navigation}>
-      <Link to={previousPage}>Previous</Link>
-      <Link to={nextPage}>Next</Link>
+  const previousAndNextLinks = (topNavigation = true) => (
+    <div
+      className={
+        topNavigation
+          ? PageContentStyles.navigationTop
+          : PageContentStyles.navigationBottom
+      }
+    >
+      <Link to={previousPage} className={PageContentStyles.navigationLink}>
+        <ArrowIcon className={PageContentStyles.rotateIcon} />
+        Previous
+      </Link>
+      <Link to={nextPage} className={PageContentStyles.navigationLink}>
+        Next
+        <ArrowIcon />
+      </Link>
     </div>
   )
 
@@ -45,7 +58,7 @@ const PageContent = props => {
         <section className={PageContentStyles.renderedMarkdown}>
           {previousAndNextLinks()}
           <ReactMarkdown source={markdown} escapeHtml={false} />
-          {previousAndNextLinks()}
+          {previousAndNextLinks(false)}
         </section>
       </section>
     </section>

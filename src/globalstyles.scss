@@ -187,9 +187,11 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  //font: 112.5%/1.45em georgia, serif;
+  font-size: 62.5%;
   box-sizing: border-box;
   overflow-y: scroll;
+  background-color: #ddd;
 }
 * {
   box-sizing: inherit;
@@ -201,8 +203,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  color: var(--text-color);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -210,6 +211,9 @@ body {
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
 }
 img {
   max-width: 100%;
@@ -335,7 +339,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 3.5rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -403,9 +407,10 @@ pre {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 0.85rem;
+  //font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  //background: hsla(0, 0%, 0%, 0.075);
+  background-color: #fff;
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -541,10 +546,10 @@ p *:last-child {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
+// code {
+//   font-size: 0.85rem;
+//   line-height: 1.45rem;
+// }
 kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
@@ -592,17 +597,29 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  // background-color: hsla(0, 0%, 0%, 0.075);
+  // border-radius: 3px;
+  // font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+  //   'Liberation Mono', Menlo, Courier, monospace;
+  // padding: 0;
+  // padding-top: 0.2em;
+  // padding-bottom: 0.2em;
+  // margin-right: 0.2em;
+  // padding-left: 0.4em;
+  background-color: #fff;
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
+  padding-top: 0.1em;
   padding-bottom: 0.2em;
+  margin-right: 0.2em;
+  padding-left: 0.4em;
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  color: #0066bf;
 }
 pre code {
-  background: none;
-  line-height: 1.42;
+  border: 0;
 }
 code:before,
 code:after,
@@ -621,4 +638,27 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+:root {
+  --aquent-orange: #f8971d;
+  --text-color: #303030;
+  --link-color: #9e5700;
+}
+a {
+  color: var(--link-color);
+  &:visited {
+    color: #444444;
+  }
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.1rem;
+}
+h3 {
+  font-size: 1.9rem;
+}
+h4 {
+  font-size: 1.7rem;
 }

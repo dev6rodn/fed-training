@@ -1,11 +1,19 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  justify-content: space-evenly;
-  height: 500px;
-  border: 2px solid black;
-  font-weight: 600;
-  margin-left: 10px;
+  //display: flex;
+  //flex-direction: column;
+  padding: 2rem;
   margin-top: 20px;
+  box-shadow: 5px 5px 0 #b3b3b3;
+  background-color: #eee;
+  margin-bottom: 10rem;
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: 0.25s;
+    display: block;
+    &:hover {
+      color: mix(#303030, #f8971d, 20);
+    }
+  }
 }
