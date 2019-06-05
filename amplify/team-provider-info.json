@@ -68,5 +68,22 @@
                 }
             }
         }
+    },
+    "etteam": {
+        "awscloudformation": {
+            "AuthRoleName": "fedtraining-etteam-20190604134610-authRole",
+            "UnauthRoleArn": "arn:aws:iam::992708525704:role/fedtraining-etteam-20190604134610-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::992708525704:role/fedtraining-etteam-20190604134610-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "fedtraining-etteam-20190604134610-deployment",
+            "UnauthRoleName": "fedtraining-etteam-20190604134610-unauthRole",
+            "StackName": "fedtraining-etteam-20190604134610",
+            "StackId": "arn:aws:cloudformation:us-east-1:992708525704:stack/fedtraining-etteam-20190604134610/d87f17d0-86f8-11e9-a44c-0e061c1f1416"
+        },
+        "categories": {
+            "auth": {
+                "fedtrainingbf1b0c44": {}
+            }
+        }
     }
 }
