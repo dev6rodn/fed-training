@@ -13,11 +13,9 @@
 }
 
 .navigationLink {
-  //font-size: 2rem;
   color: var(--text-color);
   font-weight: bold;
   line-height: 1;
-  //text-transform: uppercase;
   padding: 0.5rem 1rem;
   box-shadow: 5px 5px 0 #b3b3b3;
   transition: 0.5s;
@@ -52,7 +50,7 @@
 .content {
   display: flex;
   padding: 0 2rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .codeSandbox {
