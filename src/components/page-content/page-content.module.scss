@@ -26,21 +26,25 @@
     background-color: #fff;
     svg {
       fill: var(--aquent-orange);
+      transform: translateX(50%);
+      &.rotate180 {
+        transform: rotate(180deg) translateX(50%);
+      }
     }
   }
-  svg {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 0 0.75rem;
-    fill: var(--text-color);
-    transition: 0.5s;
-  }
 }
-.rotateIcon {
-  transform: rotate(180deg);
-  margin: 0 0.75rem 0 0 !important;
+svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 0.75rem;
+  fill: var(--text-color);
+  transition: 0.5s;
+  &.rotate180 {
+    transform: rotate(180deg);
+    margin: 0 0.75rem 0 0 !important;
+  }
 }
 
 .container {
