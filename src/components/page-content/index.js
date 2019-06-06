@@ -4,7 +4,7 @@ import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 import TableOfContents from '../../components/table-of-contents'
 import PageContentStyles from './page-content.module.scss'
-import { ReactComponent as ArrowIcon } from './arrow.svg'
+import {ArrowIcon} from './arrow-icon'
 
 const PageContent = props => {
   const nextPage = props.next ? `${props.urlPrefix}${props.next}` : '/'
