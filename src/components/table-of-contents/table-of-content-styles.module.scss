@@ -9,17 +9,11 @@
   a {
     color: var(--text-color);
     text-decoration: none;
-    margin: 1.25rem 0;
+    padding: 0.25rem 0;
     transition: 0.25s;
     display: block;
-    line-height: 1;
-    padding: 0.25rem 0;
     &:hover {
       color: mix(#303030, #f8971d, 20);
-    }
-    &.active {
-      font-weight: bold;
-      border-bottom: 1px dashed var(--aquent-orange);
     }
   }
 }
