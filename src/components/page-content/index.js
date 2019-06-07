@@ -4,7 +4,7 @@ import { fetchMarkdown } from '../../services/markdown'
 import { Link } from 'react-router-dom'
 import TableOfContents from '../../components/table-of-contents'
 import PageContentStyles from './page-content.module.scss'
-import { ArrowIcon } from './arrow-icon'
+import {ArrowIcon} from './arrow-icon'
 
 const PageContent = props => {
   const nextPage = props.next ? `${props.urlPrefix}${props.next}` : '/'
@@ -30,12 +30,12 @@ const PageContent = props => {
       }
     >
       <Link to={previousPage} className={PageContentStyles.navigationLink}>
-        <ArrowIcon direction="back" styles={PageContentStyles} />
+        <ArrowIcon className={PageContentStyles.rotateIcon} />
         Previous
       </Link>
       <Link to={nextPage} className={PageContentStyles.navigationLink}>
         Next
-        <ArrowIcon direction="foreward" styles={PageContentStyles} />
+        <ArrowIcon />
       </Link>
     </div>
   )
