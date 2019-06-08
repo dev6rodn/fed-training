@@ -50,7 +50,6 @@ function App() {
     }
   }
 
-  //maybe convertto use a Switch?
   return !user ? (
     <Authenticator theme={theme} hide={[SignUp]} />
   ) : (
