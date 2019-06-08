@@ -8,6 +8,7 @@ import browserJSPart1Markdown from './markdown/javascript-in-browser-1.md'
 import browserJSPart2Markdown from './markdown/javascript-in-browser-2.md'
 import moduleChallengeMarkdown from './markdown/module-challenge.md'
 import objectsMarkdown from './markdown/objects.md'
+import asyncAwaitMarkdown from './markdown/async-await.md'
 
 export default [
   {
@@ -103,5 +104,14 @@ export default [
     markdown: moduleChallengeMarkdown,
     previous: '/function-composition',
     codesandboxUrl: 'https://codesandbox.io/embed/nxk0rj5wm?fontsize=14',
+  },
+  {
+    id: 11,
+    displayName: '🔥NEW: Async/Await🔥',
+    path: '/async-await',
+    markdown: asyncAwaitMarkdown,
+    previous: '/module-challenge',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/asyncawait-5cey1?expanddevtools=1&fontsize=14&view=editor',
   },
 ]
