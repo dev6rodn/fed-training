@@ -26,6 +26,10 @@
     background-color: #fff;
     svg {
       fill: var(--aquent-orange);
+      transform: translateX(50%);
+      &.rotate180 {
+        transform: rotate(180deg) translateX(50%);
+      }
     }
   }
   svg {
@@ -36,11 +40,11 @@
     margin: 0 0 0 0.75rem;
     fill: var(--text-color);
     transition: 0.5s;
+    &.rotate180 {
+      transform: rotate(180deg);
+      margin: 0 0.75rem 0 0 !important;
+    }
   }
-}
-.rotateIcon {
-  transform: rotate(180deg);
-  margin: 0 0.75rem 0 0 !important;
 }
 
 .container {
