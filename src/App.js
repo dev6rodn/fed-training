@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Auth, Hub } from 'aws-amplify'
 import { Authenticator, AmplifyTheme } from 'aws-amplify-react'
 import { SignUp } from 'aws-amplify-react/dist/Auth'
