@@ -9,6 +9,7 @@ import browserJSPart2Markdown from './markdown/javascript-in-browser-2.md'
 import moduleChallengeMarkdown from './markdown/module-challenge.md'
 import objectsMarkdown from './markdown/objects.md'
 import asyncAwaitMarkdown from './markdown/async-await.md'
+import understandingThisMarkdown from './markdown/understanding-this.md'
 
 export default [
   {
@@ -104,6 +105,7 @@ export default [
     markdown: moduleChallengeMarkdown,
     previous: '/function-composition',
     codesandboxUrl: 'https://codesandbox.io/embed/nxk0rj5wm?fontsize=14',
+    next: '/async-await',
   },
   {
     id: 11,
@@ -111,7 +113,15 @@ export default [
     path: '/async-await',
     markdown: asyncAwaitMarkdown,
     previous: '/module-challenge',
+    next: '/understanding-this',
     codesandboxUrl:
       'https://codesandbox.io/embed/asyncawait-5cey1?expanddevtools=1&fontsize=14&view=editor',
+  },
+  {
+    id: 12,
+    displayName: '🔥NEW: Understanding "this"🔥',
+    path: '/understanding-this',
+    markdown: understandingThisMarkdown,
+    previous: '/async-await',
   },
 ]
