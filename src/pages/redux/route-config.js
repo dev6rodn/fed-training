@@ -65,7 +65,7 @@ export default [
   },
   {
     id: 8,
-    displayName: 'Module Challenge',
+    displayName: '🚨 Module Challenge 🚨',
     path: '/module-challenge',
     previous: '/group-project',
     markdown: moduleChallengeMarkdown,

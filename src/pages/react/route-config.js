@@ -79,7 +79,7 @@ export default [
   },
   {
     id: 9,
-    displayName: 'Module Challenge',
+    displayName: '🚨 Module Challenge 🚨',
     path: '/module-challenge',
     markdown: moduleChallenge,
     codesandboxUrl: 'https://codesandbox.io/embed/yw6kvn18z1?fontsize=14',

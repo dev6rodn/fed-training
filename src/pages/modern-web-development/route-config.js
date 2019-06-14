@@ -1,8 +1,8 @@
 import buildProcessMarkdown from './markdown/build-process.md'
 import jsSetupMarkdown from './markdown/javascript-setup.md'
-import modernDevelopmentMarkdown from './markdown/modern-development.md'
 import modularizingDevelopmentMarkdown from './markdown/modularizing-code.md'
 import overviewMarkdown from './markdown/overview.md'
+import mdouleChallengeMarkdown from './markdown/module-challenge.md'
 
 export default [
   {
@@ -14,14 +14,6 @@ export default [
   },
   {
     id: 2,
-    displayName: 'Modern Development',
-    path: '/modern-development',
-    markdown: modernDevelopmentMarkdown,
-    next: '/modularizing-code',
-    previous: '/overview',
-  },
-  {
-    id: 3,
     displayName: 'Modularizing Code',
     path: '/modularizing-code',
     markdown: modularizingDevelopmentMarkdown,
@@ -31,7 +23,7 @@ export default [
     previous: '/modern-development',
   },
   {
-    id: 4,
+    id: 3,
     displayName: 'Getting Set Up',
     path: '/js-setup',
     markdown: jsSetupMarkdown,
@@ -39,10 +31,18 @@ export default [
     previous: '/modularizing-code',
   },
   {
-    id: 5,
+    id: 4,
     displayName: 'Build Process Overview',
     path: '/build-process',
     markdown: buildProcessMarkdown,
+    previous: '/js-setup',
+    next: '/module-challenge',
+  },
+  {
+    id: 5,
+    displayName: '🚨 Module Challenge 🚨',
+    path: '/module-challenge',
+    markdown: mdouleChallengeMarkdown,
     previous: '/js-setup',
   },
 ]

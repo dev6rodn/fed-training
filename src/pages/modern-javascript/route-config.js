@@ -100,7 +100,7 @@ export default [
   },
   {
     id: 10,
-    displayName: 'Module Challenge',
+    displayName: '🚨 Module Challenge 🚨',
     path: '/module-challenge',
     markdown: moduleChallengeMarkdown,
     previous: '/function-composition',
