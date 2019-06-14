@@ -109,7 +109,7 @@ export default [
   },
   {
     id: 11,
-    displayName: '🔥NEW: Async/Await🔥',
+    displayName: '🔥NEW: Async/Await 🔥',
     path: '/async-await',
     markdown: asyncAwaitMarkdown,
     previous: '/module-challenge',
@@ -119,7 +119,7 @@ export default [
   },
   {
     id: 12,
-    displayName: '🔥NEW: Understanding "this"🔥',
+    displayName: '🔥NEW: Understanding "this" 🔥',
     path: '/understanding-this',
     markdown: understandingThisMarkdown,
     previous: '/async-await',
