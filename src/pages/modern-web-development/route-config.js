@@ -2,6 +2,7 @@ import buildProcessMarkdown from './markdown/build-process.md'
 import jsSetupMarkdown from './markdown/javascript-setup.md'
 import modularizingDevelopmentMarkdown from './markdown/modularizing-code.md'
 import overviewMarkdown from './markdown/overview.md'
+import mdouleChallengeMarkdown from './markdown/module-challenge.md'
 
 export default [
   {
@@ -34,6 +35,14 @@ export default [
     displayName: 'Build Process Overview',
     path: '/build-process',
     markdown: buildProcessMarkdown,
+    previous: '/js-setup',
+    next: '/module-challenge',
+  },
+  {
+    id: 5,
+    displayName: '🚨 Module Challenge 🚨',
+    path: '/module-challenge',
+    markdown: mdouleChallengeMarkdown,
     previous: '/js-setup',
   },
 ]

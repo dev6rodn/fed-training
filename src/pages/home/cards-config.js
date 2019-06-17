@@ -13,5 +13,10 @@ export const cardsConfig = [
     name: 'React',
     id: 3,
     path: '/react/overview',
-  }
+  },
+  {
+    name: 'Redux',
+    id: 4,
+    path: '/redux/overview',
+  },
 ]
