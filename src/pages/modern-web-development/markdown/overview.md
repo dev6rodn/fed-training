@@ -12,8 +12,4 @@ Learning frontend topics today is different than learning frontend in the past. 
 
 ## Installing a Modern Editor
 
-<<<<<<< HEAD
 Lastly, working on the frontend is its own experience compared to working on the backend, therefore I recommend that you install an editor that is optimized for this. Microsoft has an amazing and free editor that is rich in enhancing this experience called <a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer noopener">VS Code</a> that is recommended to download.
-=======
-Lastly, working on the frontend is its own experience compared to working on the backend, therefore I recommend that you install an editor that is optimized for this. Microsoft has an amazing and free editor that is rich in enhancing this experience called <a href="https://code.visualstudio.com/download" target=_blank rel="noreferrer noopener">VS Code</a> that is recommended to download.
->>>>>>> 618cd5a33039d9f3b290ecf04d2e05bd95e7d6fd
