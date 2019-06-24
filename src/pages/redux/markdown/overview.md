@@ -1,5 +1,8 @@
 <h1 style="text-align: center; text-decoration: underline; margin-top: 50px">Overview</h1>
 
+<img src="https://liendo-fed-training.s3.amazonaws.com/redux-flow.jpeg" alt="redux flow" height="600px" width="600px" style="display:block; margin: 10px auto">
+
+#### 📝 An action is triggered from the UI, and flows into the reducers, the reducers return a new piece of state which gets put into the store. The store feeds data back into the UI.
 
 <a href="https://redux.js.org/" target="_blank" rel="noreffer noopener">Redux</a> is a state management library that pairs well with React's data model. However it should be noted that redux itself has nothing to do with react.
 
