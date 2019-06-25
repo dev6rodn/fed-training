@@ -131,6 +131,7 @@ export default [
     path: '/group-project',
     markdown: groupProjectMarkdown,
     previous: '/understanding-this',
-    codesandboxUrl: 'https://codesandbox.io/embed/static-6okrn?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/chartjs-project-lyd1k?fontsize=14',
   },
 ]
