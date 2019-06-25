@@ -10,6 +10,7 @@ import moduleChallengeMarkdown from './markdown/module-challenge.md'
 import objectsMarkdown from './markdown/objects.md'
 import asyncAwaitMarkdown from './markdown/async-await.md'
 import understandingThisMarkdown from './markdown/understanding-this.md'
+import groupProjectMarkdown from './markdown/group-project.md'
 
 export default [
   {
@@ -123,5 +124,13 @@ export default [
     path: '/understanding-this',
     markdown: understandingThisMarkdown,
     previous: '/async-await',
+  },
+  {
+    id: 13,
+    displayName: '🔥NEW: Group Project 🔥',
+    path: '/group-project',
+    markdown: groupProjectMarkdown,
+    previous: '/understanding-this',
+    codesandboxUrl: 'https://codesandbox.io/embed/static-6okrn?fontsize=14',
   },
 ]
