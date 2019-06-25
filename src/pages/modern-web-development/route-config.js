@@ -10,7 +10,7 @@ export default [
     displayName: 'Overview',
     path: '/overview',
     markdown: overviewMarkdown,
-    next: '/modern-development',
+    next: '/modularizing-code',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export default [
     codesandboxUrl:
       'https://codesandbox.io/embed/o89n31k3y?expanddevtools=1&fontsize=14&hidenavigation=1',
     next: '/js-setup',
-    previous: '/modern-development',
+    previous: '/overview',
   },
   {
     id: 3,
