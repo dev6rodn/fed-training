@@ -8,14 +8,14 @@ type ModuleTest
   ) {
   id: ID!
   module: String!
-  questions: [Question]
+  questions: [Question!]!
 }
 
 type Question {
   score: Int!
   text: String!
   resource: String!
-  answers: [Answer]
+  answers: [Answer!]!
 }
 
 type Answer {
