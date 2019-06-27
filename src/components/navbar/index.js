@@ -5,6 +5,8 @@ import { FEDTrainingLogo } from './FED-Logo'
 
 function Navbar({ user, handleSignOut }) {
   const username = user && user.username
+  const userGroups =
+    user.signInUserSession.accessToken.payload['cognito:groups']
 
   return (
     <nav className="navigation">
@@ -14,6 +16,11 @@ function Navbar({ user, handleSignOut }) {
       <div className="nav-secondary">
         {username && (
           <span className={'nav-item'}>Welcome{`, ${username}`}</span>
+        )}
+        {userGroups.includes('Admin') && (
+          <Link className="nav-item" to="/admin-portal">
+            Admin Portal
+          </Link>
         )}
         <span className={'nav-item'} onClick={handleSignOut}>
           Sign Out

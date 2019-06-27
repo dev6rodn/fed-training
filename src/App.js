@@ -8,6 +8,7 @@ import ReactTrainingLayout from './pages/react'
 import JavaScriptTrainingLayout from './pages/modern-javascript'
 import WebDevTrainingLayout from './pages/modern-web-development'
 import ReduxTrainingLayout from './pages/redux'
+import AdminPortalPage from './pages/admin-portal'
 import Amplify from 'aws-amplify'
 import config from './aws-exports'
 import Navbar from './components/navbar'
@@ -67,6 +68,7 @@ function App() {
         component={WebDevTrainingLayout}
       />
       <Route path="/redux/:page" component={ReduxTrainingLayout} />
+      <Route path="/admin-portal" component={AdminPortalPage} />
     </Router>
   )
 }
