@@ -9,6 +9,7 @@ export const getModuleTest = `query GetModuleTest($id: ID!) {
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -30,6 +31,7 @@ export const listModuleTests = `query ListModuleTests(
         score
         text
         resource
+        codeImg
       }
     }
     nextToken
@@ -47,6 +49,7 @@ export const getUserAssessment = `query GetUserAssessment($id: ID!) {
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan
@@ -59,6 +62,57 @@ export const listUserAssessments = `query ListUserAssessments(
   $nextToken: String
 ) {
   listUserAssessments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      results {
+        moduleName
+        moduleScore
+      }
+      studyPlan
+    }
+    nextToken
+  }
+}
+`;
+export const searchModuleTests = `query SearchModuleTests(
+  $filter: SearchableModuleTestFilterInput
+  $sort: SearchableModuleTestSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchModuleTests(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      module
+      questions {
+        score
+        text
+        resource
+        codeImg
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const searchUserAssessments = `query SearchUserAssessments(
+  $filter: SearchableUserAssessmentFilterInput
+  $sort: SearchableUserAssessmentSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchUserAssessments(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
     items {
       id
       username

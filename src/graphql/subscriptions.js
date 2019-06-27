@@ -9,6 +9,7 @@ export const onCreateModuleTest = `subscription OnCreateModuleTest {
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -25,6 +26,7 @@ export const onUpdateModuleTest = `subscription OnUpdateModuleTest {
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -41,6 +43,7 @@ export const onDeleteModuleTest = `subscription OnDeleteModuleTest {
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -60,6 +63,7 @@ export const onCreateUserAssessment = `subscription OnCreateUserAssessment {
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan
@@ -77,6 +81,7 @@ export const onUpdateUserAssessment = `subscription OnUpdateUserAssessment {
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan
@@ -94,6 +99,7 @@ export const onDeleteUserAssessment = `subscription OnDeleteUserAssessment {
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan

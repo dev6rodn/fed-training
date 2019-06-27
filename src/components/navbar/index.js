@@ -17,7 +17,10 @@ function Navbar({ user, handleSignOut }) {
         {username && (
           <span className={'nav-item'}>Welcome{`, ${username}`}</span>
         )}
-        {userGroups.includes('Class') && (
+        <Link className={'nav-item'} to="/assessments">
+          Assessments
+        </Link>
+        {userGroups.includes('Admin') && (
           <Link className="nav-item" to="/admin-portal">
             Admin Portal
           </Link>
@@ -31,3 +34,39 @@ function Navbar({ user, handleSignOut }) {
 }
 
 export default Navbar
+
+// mutation {
+//   createModuleTest(input: {
+//     module: "hello",
+//     questions: [
+//       {
+//         text: "how old are you?",
+//         score: 20,
+//         resource: "somewhere on the web",
+//         answers: [
+//           {
+//             text: "2",
+//             isCorrect: false
+//           },
+//           {
+//             text: "20",
+//             isCorrect: false
+//           },
+//           {
+//             text: "25",
+//             isCorrect: false
+//           },
+//           {
+//             text: "30",
+//             isCorrect: true
+//           }
+//         ]
+//       }
+//     ]
+//   }) {
+//     id
+//     questions {
+//       text
+//     }
+//   }
+// }

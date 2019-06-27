@@ -9,6 +9,7 @@ export const createModuleTest = `mutation CreateModuleTest($input: CreateModuleT
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -25,6 +26,7 @@ export const updateModuleTest = `mutation UpdateModuleTest($input: UpdateModuleT
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -41,6 +43,7 @@ export const deleteModuleTest = `mutation DeleteModuleTest($input: DeleteModuleT
       score
       text
       resource
+      codeImg
       answers {
         text
         isCorrect
@@ -60,6 +63,7 @@ export const createUserAssessment = `mutation CreateUserAssessment($input: Creat
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan
@@ -77,6 +81,7 @@ export const updateUserAssessment = `mutation UpdateUserAssessment($input: Updat
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan
@@ -94,6 +99,7 @@ export const deleteUserAssessment = `mutation DeleteUserAssessment($input: Delet
         score
         text
         resource
+        codeImg
       }
     }
     studyPlan

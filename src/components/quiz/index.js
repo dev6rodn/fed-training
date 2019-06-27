@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import AnswerCheckboxGroup from './answer-checkbox-group'
+import { isCorrectAnswer } from './helpers/question-answer'
 
 const QuizItem = props => {
   const [quizItem, setQuizItem] = useState(0)
 
-  const { question, answers } = props.data[quizItem]
+  const { questions } = props.data[quizItem]
 
   const handleAnswerSubmission = questionResponses => {
-    // validateQuestion(answer)
+    console.log('the question response', questionResponses)
 
+    const hasCorrectAnswer = isCorrectAnswer(questionResponses)
+    console.log('the correct answer', hasCorrectAnswer)
     // provideFeedbackToUser
 
     //proceedToNextQuizItem
-    console.log(questionResponses)
     if (quizItem < props.data.length - 1) {
       setQuizItem(quizItem + 1)
     }
@@ -20,10 +22,12 @@ const QuizItem = props => {
 
   return (
     <main>
-      <h3>{question.text}</h3>
-      {question.image && <img src={question.image} alt="code view" />}
+      <h3>{questions[quizItem].text}</h3>
+      {questions[quizItem].image && (
+        <img src={questions[quizItem].image} alt="code view" />
+      )}
       <AnswerCheckboxGroup
-        answers={answers}
+        answers={questions[quizItem].answers}
         updateAnswerSubmission={handleAnswerSubmission}
       />
     </main>
