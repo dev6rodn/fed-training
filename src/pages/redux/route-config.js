@@ -52,6 +52,8 @@ export default [
     displayName: 'Redux with React',
     path: '/redux-with-react',
     markdown: reactReduxMarkdown,
+    codesandboxUrl:
+      'https://codesandbox.io/embed/example-flow-xq1dx?expanddevtools=1&fontsize=14&hidenavigation=1',
     previous: '/reducers',
     next: '/group-project',
   },

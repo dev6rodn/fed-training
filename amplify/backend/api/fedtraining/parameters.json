@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "fedtraining",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authfedtrainingbf1b0c44",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

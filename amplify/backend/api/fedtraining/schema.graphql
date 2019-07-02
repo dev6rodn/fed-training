@@ -1,0 +1,48 @@
+type ModuleTest
+  @model
+  @searchable
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: groups, groups: ["Class"], operations: [read] }
+    ]
+  ) {
+  id: ID!
+  module: String!
+  questions: [Question!]!
+}
+
+type Question {
+  score: Int!
+  text: String!
+  resource: String!
+  codeImg: String
+  answers: [Answer!]!
+}
+
+type Answer {
+  text: String!
+  isCorrect: Boolean!
+}
+
+type UserAssessment
+  @model
+  @searchable
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: owner, operations: [create, read, update] }
+    ]
+  ) {
+  id: ID!
+  username: String!
+  employer: String!
+  results: [AssessmentResults]
+  studyPlan: [String!]
+}
+
+type AssessmentResults {
+  moduleName: String!
+  moduleScore: Int!
+  quizItems: [Question]!
+}

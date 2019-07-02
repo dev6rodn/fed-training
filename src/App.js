@@ -8,9 +8,11 @@ import ReactTrainingLayout from './pages/react'
 import JavaScriptTrainingLayout from './pages/modern-javascript'
 import WebDevTrainingLayout from './pages/modern-web-development'
 import ReduxTrainingLayout from './pages/redux'
+import AdminPortalPage from './pages/admin-portal'
 import Amplify from 'aws-amplify'
 import config from './aws-exports'
 import Navbar from './components/navbar'
+import AssessmentsPage from './pages/assessments'
 
 Amplify.configure(config)
 
@@ -67,11 +69,13 @@ function App() {
         component={WebDevTrainingLayout}
       />
       <Route path="/redux/:page" component={ReduxTrainingLayout} />
+      <Route path="/assessments" component={AssessmentsPage} />
+      <Route path="/admin-portal" component={AdminPortalPage} />
     </Router>
   )
 }
 
-// used to override the hosted UI for logging in
+// used to override the hosted UI when logging in
 const theme = {
   ...AmplifyTheme,
   navBar: {
