@@ -36,6 +36,7 @@ type UserAssessment
   ) {
   id: ID!
   username: String!
+  employer: String!
   results: [AssessmentResults]
   studyPlan: [String!]
 }
