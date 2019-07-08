@@ -5,6 +5,7 @@ import actionsMarkdown from './markdown/actions.md'
 import reducersMarkdown from './markdown/reducers.md'
 import reactReduxMarkdown from './markdown/react-redux.md'
 import groupProjectMarkdown from './markdown/group-project.md'
+import asyncActionsMarkdown from './markdown/async-actions.md'
 import moduleChallengeMarkdown from './markdown/module-challenge.md'
 
 export default [
@@ -62,11 +63,23 @@ export default [
     displayName: 'Group Project',
     path: '/group-project',
     markdown: groupProjectMarkdown,
+    codesandboxUrl:
+      'https://codesandbox.io/embed/group-project-todo-full-65hwf?fontsize=14',
     previous: '/redux-with-react',
     next: '/module-challenge',
   },
   {
     id: 8,
+    displayName: 'Async Actions',
+    path: '/async-actions',
+    markdown: asyncActionsMarkdown,
+    codesandboxUrl:
+      'https://codesandbox.io/embed/async-action-creators-example-pjhg1?expanddevtools=1&fontsize=14&hidenavigation=1',
+    previous: '/group-project',
+    next: '/module-challenge',
+  },
+  {
+    id: 9,
     displayName: '🚨 Module Challenge 🚨',
     path: '/module-challenge',
     previous: '/group-project',
