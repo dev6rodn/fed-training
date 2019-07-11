@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import AnswerCheckboxGroup from './answer-checkbox-group'
 import { isCorrectAnswer } from './helpers/question-answer'
+import assessmentStyles from './assessmentStyles.module.scss'
 
-const QuizItem = props => {
+const QuizItem = ({ moduleAssessmentData }) => {
   const [quizItem, setQuizItem] = useState(0)
-
-  const { questions } = props.data[quizItem]
+  const { questions } = moduleAssessmentData
 
   const handleAnswerSubmission = questionResponses => {
     console.log('the question response', questionResponses)
@@ -15,22 +15,20 @@ const QuizItem = props => {
     // provideFeedbackToUser
 
     //proceedToNextQuizItem
-    if (quizItem < props.data.length - 1) {
+    if (quizItem < questions.length - 1) {
       setQuizItem(quizItem + 1)
     }
   }
 
   return (
-    <main>
-      <h3>{questions[quizItem].text}</h3>
-      {questions[quizItem].image && (
-        <img src={questions[quizItem].image} alt="code view" />
-      )}
+    <section className={assessmentStyles.content}>
+      <h1>{questions[quizItem].text}</h1>
+      <img src={questions[quizItem].codeImg} alt="code view" />
       <AnswerCheckboxGroup
         answers={questions[quizItem].answers}
         updateAnswerSubmission={handleAnswerSubmission}
       />
-    </main>
+    </section>
   )
 }
 

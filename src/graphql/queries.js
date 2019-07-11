@@ -17,7 +17,7 @@ export const getModuleTest = `query GetModuleTest($id: ID!) {
     }
   }
 }
-`;
+`
 export const listModuleTests = `query ListModuleTests(
   $filter: ModelModuleTestFilterInput
   $limit: Int
@@ -32,12 +32,16 @@ export const listModuleTests = `query ListModuleTests(
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+        }
       }
     }
     nextToken
   }
 }
-`;
+`
 export const getUserAssessment = `query GetUserAssessment($id: ID!) {
   getUserAssessment(id: $id) {
     id
@@ -55,7 +59,7 @@ export const getUserAssessment = `query GetUserAssessment($id: ID!) {
     studyPlan
   }
 }
-`;
+`
 export const listUserAssessments = `query ListUserAssessments(
   $filter: ModelUserAssessmentFilterInput
   $limit: Int
@@ -74,7 +78,7 @@ export const listUserAssessments = `query ListUserAssessments(
     nextToken
   }
 }
-`;
+`
 export const searchModuleTests = `query SearchModuleTests(
   $filter: SearchableModuleTestFilterInput
   $sort: SearchableModuleTestSortInput
@@ -95,12 +99,16 @@ export const searchModuleTests = `query SearchModuleTests(
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+        }
       }
     }
     nextToken
   }
 }
-`;
+`
 export const searchUserAssessments = `query SearchUserAssessments(
   $filter: SearchableUserAssessmentFilterInput
   $sort: SearchableUserAssessmentSortInput
@@ -125,4 +133,4 @@ export const searchUserAssessments = `query SearchUserAssessments(
     nextToken
   }
 }
-`;
+`

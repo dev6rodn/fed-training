@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  flex-flow: row wrap;
+
+  label {
+    padding-right: 30px;
+    span {
+      font-size: 2rem;
+      padding: 5px;
+    }
+  }
+}

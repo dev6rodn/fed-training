@@ -9,7 +9,7 @@ const AssessmentsPage = () => {
       <ul>
         {cardsConfig.map(card => {
           return (
-            <li>
+            <li key={card.urlName}>
               <Link to={`/assessments/${card.urlName}`}>{card.name}</Link>
             </li>
           )
