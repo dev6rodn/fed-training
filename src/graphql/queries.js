@@ -46,6 +46,7 @@ export const getUserAssessment = `query GetUserAssessment($id: ID!) {
   getUserAssessment(id: $id) {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
@@ -69,6 +70,7 @@ export const listUserAssessments = `query ListUserAssessments(
     items {
       id
       username
+      employer
       results {
         moduleName
         moduleScore
@@ -99,10 +101,6 @@ export const searchModuleTests = `query SearchModuleTests(
         text
         resource
         codeImg
-        answers {
-          text
-          isCorrect
-        }
       }
     }
     nextToken
@@ -124,6 +122,7 @@ export const searchUserAssessments = `query SearchUserAssessments(
     items {
       id
       username
+      employer
       results {
         moduleName
         moduleScore

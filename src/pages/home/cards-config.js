@@ -12,13 +12,13 @@ export const cardsConfig = [
     path: '/modern-web-development/overview',
   },
   {
-    name: 'React',
+    name: 'React Fundamentals',
     urlName: 'react',
     id: 3,
     path: '/react/overview',
   },
   {
-    name: 'Redux',
+    name: 'React with Redux',
     urlName: 'redux',
     id: 4,
     path: '/redux/overview',

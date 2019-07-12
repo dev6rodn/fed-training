@@ -56,6 +56,7 @@ export const createUserAssessment = `mutation CreateUserAssessment($input: Creat
   createUserAssessment(input: $input) {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
@@ -74,6 +75,7 @@ export const updateUserAssessment = `mutation UpdateUserAssessment($input: Updat
   updateUserAssessment(input: $input) {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
@@ -92,6 +94,7 @@ export const deleteUserAssessment = `mutation DeleteUserAssessment($input: Delet
   deleteUserAssessment(input: $input) {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
