@@ -23,4 +23,10 @@ export const cardsConfig = [
     id: 4,
     path: '/redux/overview',
   },
+  {
+    name: 'Testing Frontend Apps',
+    urlName: 'testing-spas',
+    id: 5,
+    path: '/testing-spas/overview',
+  },
 ]
