@@ -5,25 +5,21 @@ import * as queries from '../../../graphql/queries'
 import QuizItem from '../../../components/quiz'
 
 const ModuleAssessment = ({ match }) => {
+  const assessmentName = match.params.assessmentName
   return (
-    <div>
-      assessment time for {match.params.assessmentName}
+    <main>
       <Connect
-        query={graphqlOperation(queries.getModuleTest, {
-          id: '9e4f1602-e8bc-4e10-97e5-1508e7bc2060',
+        query={graphqlOperation(queries.listModuleTests, {
+          filter: { module: { eq: assessmentName } },
         })}
       >
-        {({ data, loading, error }) => {
-          console.log(data)
-          {
-            /* console.log('the module tests', listModuleTests)
+        {({ data: { listModuleTests }, loading, error }) => {
           if (error) return <h3>Error</h3>
           if (loading || !listModuleTests) return <h3>Loading...</h3>
-          return <QuizItem data={listModuleTests.items} /> */
-          }
+          return <QuizItem moduleAssessmentData={listModuleTests.items[0]} />
         }}
       </Connect>
-    </div>
+    </main>
   )
 }
 

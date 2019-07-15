@@ -56,6 +56,7 @@ export const onCreateUserAssessment = `subscription OnCreateUserAssessment {
   onCreateUserAssessment {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
@@ -74,6 +75,7 @@ export const onUpdateUserAssessment = `subscription OnUpdateUserAssessment {
   onUpdateUserAssessment {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
@@ -92,6 +94,7 @@ export const onDeleteUserAssessment = `subscription OnDeleteUserAssessment {
   onDeleteUserAssessment {
     id
     username
+    employer
     results {
       moduleName
       moduleScore
