@@ -11,14 +11,23 @@ import objectsMarkdown from './markdown/objects.md'
 import asyncAwaitMarkdown from './markdown/async-await.md'
 import understandingThisMarkdown from './markdown/understanding-this.md'
 import groupProjectMarkdown from './markdown/group-project.md'
+import firstStepsMarkdown from './markdown/first-steps.md'
 
 export default [
   {
-    id: 1,
+    id: 0,
     displayName: 'Overview',
     path: '/overview',
     markdown: overviewMarkdown,
+    next: '/firstSteps',
+  },
+  {
+    id: 1,
+    displayName: '🔥NEW: First Steps🔥',
+    path: '/first-steps',
+    markdown: firstStepsMarkdown,
     next: '/functions',
+    previous: '/overview',
   },
   {
     id: 2,
