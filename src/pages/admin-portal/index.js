@@ -24,7 +24,7 @@ const AdminPortalPage = () => {
         <option value="react">React</option>
         <option value="redux">Redux</option>
       </select>
-      <FormList updateModuleTest={setModuleTest} />
+      <FormList updateModuleTest={setModuleTest} moduleName={moduleName} />
     </main>
   )
 }

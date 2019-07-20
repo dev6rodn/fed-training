@@ -2,10 +2,54 @@ import React from 'react'
 import { Formik, Field, Form } from 'formik'
 import { TextField, SimpleFileUpload } from 'formik-material-ui'
 import { Button } from '@material-ui/core'
+import uuid from 'uuid/v4'
 import AnswerList from './answer-list'
 import { transformQuestionValues } from './form-helpers'
+import { Storage } from 'aws-amplify'
+import config from '../../aws-exports'
 
-const FormList = ({ updateModuleTest }) => {
+const {
+  aws_user_files_s3_bucket_region: region,
+  aws_user_files_s3_bucket: bucket,
+} = config
+
+const FormList = ({ updateModuleTest, moduleName }) => {
+  const handleSubmit = async (values, { resetForm }) => {
+    console.log(values)
+    console.log(values.codeImg)
+    console.log(values.codeImg.name)
+    const newStructure = transformQuestionValues(values)
+    const file = values.codeImg
+
+    const extension = file.name.split('.')[1]
+    const { type: mimeType } = file
+    const key = `images/${moduleName}${uuid()}.${extension}`
+    const url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`
+    newStructure.codeImg = url
+
+    try {
+      await Storage.put(key, file, {
+        contentType: mimeType,
+      })
+    } catch (err) {
+      console.log('error: ', err)
+    }
+    updateModuleTest(oldstate => [...oldstate, newStructure])
+    resetForm({
+      question: '',
+      codeImg: undefined,
+      score: undefined,
+      resource: '',
+      correctAnswer: '',
+      answer2: '',
+      answer2Checkbox: false,
+      answer3: '',
+      answer3Checkbox: false,
+      answer4: '',
+      answer4Checkbox: false,
+    })
+  }
+
   return (
     <main
       style={{
@@ -14,31 +58,7 @@ const FormList = ({ updateModuleTest }) => {
         alignItems: 'center',
       }}
     >
-      <Formik
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          setTimeout(() => {
-            setSubmitting(false)
-
-            const newStructure = transformQuestionValues(values)
-            console.log('new structure', newStructure)
-            updateModuleTest(oldstate => [...oldstate, newStructure])
-            resetForm({
-              moduleName: 'modern-javascript',
-              question: '',
-              codeImg: undefined,
-              score: undefined,
-              resource: '',
-              correctAnswer: '',
-              answer2: '',
-              answer2Checkbox: false,
-              answer3: '',
-              answer3Checkbox: false,
-              answer4: '',
-              answer4Checkbox: false,
-            })
-          }, 500)
-        }}
-      >
+      <Formik onSubmit={handleSubmit}>
         {({ submitForm, isSubmitting, values, setFieldValue }) => {
           return (
             <Form>
@@ -59,13 +79,6 @@ const FormList = ({ updateModuleTest }) => {
                 component={SimpleFileUpload}
               />
 
-              <Field
-                required
-                name={`score`}
-                label="Score"
-                type="number"
-                component={TextField}
-              />
               <br />
               <Field
                 required
@@ -77,7 +90,13 @@ const FormList = ({ updateModuleTest }) => {
               <br />
 
               <AnswerList />
-
+              <Field
+                required
+                name={`score`}
+                label="Score: # correct answers"
+                type="number"
+                component={TextField}
+              />
               <br />
               <Button
                 variant="contained"
@@ -85,7 +104,7 @@ const FormList = ({ updateModuleTest }) => {
                 disabled={isSubmitting}
                 onClick={submitForm}
               >
-                Confirm Question Item
+                Add Question to Assessment
               </Button>
             </Form>
           )
