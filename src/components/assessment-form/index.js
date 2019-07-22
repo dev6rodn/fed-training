@@ -2,39 +2,15 @@ import React from 'react'
 import { Formik, Field, Form } from 'formik'
 import { TextField, SimpleFileUpload } from 'formik-material-ui'
 import { Button } from '@material-ui/core'
-import uuid from 'uuid/v4'
 import AnswerList from './answer-list'
 import { transformQuestionValues } from './form-helpers'
-import { Storage } from 'aws-amplify'
-import config from '../../aws-exports'
 
-const {
-  aws_user_files_s3_bucket_region: region,
-  aws_user_files_s3_bucket: bucket,
-} = config
-
-const FormList = ({ updateModuleTest, moduleName }) => {
+const FormList = ({ handleFormSubmit }) => {
   const handleSubmit = async (values, { resetForm }) => {
-    console.log(values)
-    console.log(values.codeImg)
-    console.log(values.codeImg.name)
     const newStructure = transformQuestionValues(values)
     const file = values.codeImg
 
-    const extension = file.name.split('.')[1]
-    const { type: mimeType } = file
-    const key = `images/${moduleName}${uuid()}.${extension}`
-    const url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`
-    newStructure.codeImg = url
-
-    try {
-      await Storage.put(key, file, {
-        contentType: mimeType,
-      })
-    } catch (err) {
-      console.log('error: ', err)
-    }
-    updateModuleTest(oldstate => [...oldstate, newStructure])
+    handleFormSubmit(file, newStructure)
     resetForm({
       question: '',
       codeImg: undefined,

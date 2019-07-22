@@ -5,6 +5,7 @@ export const createModuleTest = `mutation CreateModuleTest($input: CreateModuleT
   createModuleTest(input: $input) {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
@@ -22,6 +23,7 @@ export const updateModuleTest = `mutation UpdateModuleTest($input: UpdateModuleT
   updateModuleTest(input: $input) {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
@@ -39,6 +41,7 @@ export const deleteModuleTest = `mutation DeleteModuleTest($input: DeleteModuleT
   deleteModuleTest(input: $input) {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
