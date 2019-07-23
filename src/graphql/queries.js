@@ -14,6 +14,7 @@ export const getModuleTest = `query GetModuleTest($id: ID!) {
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
@@ -37,6 +38,7 @@ export const listModuleTests = `query ListModuleTests(
         answers {
           text
           isCorrect
+          checked
         }
       }
     }
@@ -49,17 +51,23 @@ export const getUserAssessment = `query GetUserAssessment($id: ID!) {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+          checked
+        }
       }
     }
-    studyPlan
   }
 }
 `
@@ -73,11 +81,12 @@ export const listUserAssessments = `query ListUserAssessments(
       id
       username
       employer
-      results {
+      assessments {
         moduleName
-        moduleScore
+        totalPointsAllowed
+        totalPointsAchieved
+        studyPlan
       }
-      studyPlan
     }
     nextToken
   }
@@ -107,6 +116,7 @@ export const searchModuleTests = `query SearchModuleTests(
         answers {
           text
           isCorrect
+          checked
         }
       }
     }
@@ -130,11 +140,12 @@ export const searchUserAssessments = `query SearchUserAssessments(
       id
       username
       employer
-      results {
+      assessments {
         moduleName
-        moduleScore
+        totalPointsAllowed
+        totalPointsAchieved
+        studyPlan
       }
-      studyPlan
     }
     nextToken
   }

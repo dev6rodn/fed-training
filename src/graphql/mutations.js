@@ -14,11 +14,12 @@ export const createModuleTest = `mutation CreateModuleTest($input: CreateModuleT
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const updateModuleTest = `mutation UpdateModuleTest($input: UpdateModuleTestInput!) {
   updateModuleTest(input: $input) {
     id
@@ -32,11 +33,12 @@ export const updateModuleTest = `mutation UpdateModuleTest($input: UpdateModuleT
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const deleteModuleTest = `mutation DeleteModuleTest($input: DeleteModuleTestInput!) {
   deleteModuleTest(input: $input) {
     id
@@ -50,65 +52,84 @@ export const deleteModuleTest = `mutation DeleteModuleTest($input: DeleteModuleT
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const createUserAssessment = `mutation CreateUserAssessment($input: CreateUserAssessmentInput!) {
   createUserAssessment(input: $input) {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+          checked
+        }
       }
     }
-    studyPlan
   }
 }
-`;
+`
 export const updateUserAssessment = `mutation UpdateUserAssessment($input: UpdateUserAssessmentInput!) {
   updateUserAssessment(input: $input) {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+          checked
+        }
       }
     }
-    studyPlan
   }
 }
-`;
+`
 export const deleteUserAssessment = `mutation DeleteUserAssessment($input: DeleteUserAssessmentInput!) {
   deleteUserAssessment(input: $input) {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+          checked
+        }
       }
     }
-    studyPlan
   }
 }
-`;
+`

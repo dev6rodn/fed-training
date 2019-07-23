@@ -14,7 +14,6 @@ const FormList = ({ handleFormSubmit }) => {
     resetForm({
       question: '',
       codeImg: undefined,
-      score: undefined,
       resource: '',
       correctAnswer: '',
       answer2: '',
@@ -66,13 +65,7 @@ const FormList = ({ handleFormSubmit }) => {
               <br />
 
               <AnswerList />
-              <Field
-                required
-                name={`score`}
-                label="Score: # correct answers"
-                type="number"
-                component={TextField}
-              />
+
               <br />
               <Button
                 variant="contained"

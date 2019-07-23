@@ -24,6 +24,7 @@ type Question {
 type Answer {
   text: String
   isCorrect: Boolean!
+  checked: Boolean
 }
 
 type UserAssessment
@@ -38,12 +39,13 @@ type UserAssessment
   id: ID!
   username: String!
   employer: String!
-  results: [AssessmentResults]
-  studyPlan: [String!]
+  assessments: [AssessmentResults]
 }
 
 type AssessmentResults {
   moduleName: String!
-  moduleScore: Int!
-  quizItems: [Question]!
+  totalPointsAllowed: Int!
+  totalPointsAchieved: Int!
+  studyPlan: [String!]
+  results: [Question]!
 }

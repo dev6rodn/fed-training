@@ -14,11 +14,12 @@ export const onCreateModuleTest = `subscription OnCreateModuleTest {
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const onUpdateModuleTest = `subscription OnUpdateModuleTest {
   onUpdateModuleTest {
     id
@@ -32,11 +33,12 @@ export const onUpdateModuleTest = `subscription OnUpdateModuleTest {
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const onDeleteModuleTest = `subscription OnDeleteModuleTest {
   onDeleteModuleTest {
     id
@@ -50,65 +52,69 @@ export const onDeleteModuleTest = `subscription OnDeleteModuleTest {
       answers {
         text
         isCorrect
+        checked
       }
     }
   }
 }
-`;
+`
 export const onCreateUserAssessment = `subscription OnCreateUserAssessment {
   onCreateUserAssessment {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
       }
     }
-    studyPlan
   }
 }
-`;
+`
 export const onUpdateUserAssessment = `subscription OnUpdateUserAssessment {
   onUpdateUserAssessment {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
       }
     }
-    studyPlan
   }
 }
-`;
+`
 export const onDeleteUserAssessment = `subscription OnDeleteUserAssessment {
   onDeleteUserAssessment {
     id
     username
     employer
-    results {
+    assessments {
       moduleName
-      moduleScore
-      quizItems {
+      totalPointsAllowed
+      totalPointsAchieved
+      studyPlan
+      results {
         score
         text
         resource
         codeImg
       }
     }
-    studyPlan
   }
 }
-`;
+`
