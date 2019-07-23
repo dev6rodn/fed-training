@@ -7,7 +7,7 @@ function Navbar({ user, handleSignOut }) {
   const username = user && user.username
   const userGroups =
     user.signInUserSession.accessToken.payload['cognito:groups']
-
+  console.log(userGroups)
   return (
     <nav className="navigation">
       <Link to="/" className="nav-primary nav-item training-logo">
@@ -20,7 +20,7 @@ function Navbar({ user, handleSignOut }) {
         <Link className={'nav-item'} to="/assessments">
           Assessments
         </Link>
-        {userGroups.includes('Admin') && (
+        {userGroups.length > 0 && userGroups.includes('Admin') && (
           <Link className="nav-item" to="/admin-portal">
             Admin Portal
           </Link>
