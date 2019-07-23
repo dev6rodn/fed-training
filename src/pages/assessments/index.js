@@ -15,10 +15,7 @@ const AssessmentsPage = () => {
           )
         })}
       </ul>
-      <Route
-        path={`/assessments/:assessmentName`}
-        component={ModuleAssessment}
-      />
+      <Route path={`/assessments/:moduleName`} component={ModuleAssessment} />
     </main>
   )
 }

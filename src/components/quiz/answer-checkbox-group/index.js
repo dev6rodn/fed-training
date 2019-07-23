@@ -25,17 +25,19 @@ const AnswerCheckboxGroup = ({ answers, updateAnswerSubmission }) => {
     updateAnswerSubmission(answersList)
   }
 
-  const checkboxes = answersList.map((answerItem, i) => (
-    <label key={answerItem.text}>
-      <input
-        type="checkbox"
-        id={answerItem.text}
-        checked={answerItem.checked}
-        onChange={() => handleChange(i)}
-      />
-      <span>{answerItem.text}</span>
-    </label>
-  ))
+  const checkboxes = answersList
+    .filter(answerItem => answerItem.text)
+    .map((answerItem, i) => (
+      <label key={answerItem.text}>
+        <input
+          type="checkbox"
+          id={answerItem.text}
+          checked={answerItem.checked}
+          onChange={() => handleChange(i)}
+        />
+        <span>{answerItem.text}</span>
+      </label>
+    ))
 
   return (
     <form className={answerFormStyles.content} onSubmit={handleFormSubmit}>

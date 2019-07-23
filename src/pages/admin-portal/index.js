@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FormList from '../../components/assessment-form'
 import uuid from 'uuid/v4'
 import { createModuleTest, updateModuleTest } from '../../graphql/mutations'
@@ -6,6 +6,7 @@ import { Storage } from 'aws-amplify'
 import API, { graphqlOperation } from '@aws-amplify/api'
 import config from '../../aws-exports'
 import { modulesConfig } from '../modules-config'
+import { searchModuleTests } from '../../graphql/queries'
 API.configure(config)
 
 const {
@@ -17,6 +18,19 @@ const AdminPortalPage = () => {
   const [moduleTest, setModuleTest] = useState([])
   const [moduleName, setModuleName] = useState('modern-javascript')
 
+  useEffect(() => {
+    API.graphql(
+      graphqlOperation(searchModuleTests, {
+        filter: { id: { eq: moduleName } },
+      })
+    ).then(({ data }) => {
+      const savedQuestions = data.searchModuleTests.items.map(
+        item => item.questions
+      )
+
+      setModuleTest([...savedQuestions][0])
+    })
+  }, [moduleName])
   const handleFormSubmit = async (file, moduleQuestion) => {
     const totalPointsAllowed = [...moduleTest, moduleQuestion].reduce(
       (accum, item) => accum + item.score,
