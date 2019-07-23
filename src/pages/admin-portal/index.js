@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import FormList from '../../components/assessment-form'
 import uuid from 'uuid/v4'
 import { createModuleTest, updateModuleTest } from '../../graphql/mutations'
-// import { Storage, graphqlOperation, API } from 'aws-amplify'
+import { Storage } from 'aws-amplify'
 import API, { graphqlOperation } from '@aws-amplify/api'
 import config from '../../aws-exports'
 
@@ -12,8 +12,6 @@ const {
   aws_user_files_s3_bucket_region: region,
   aws_user_files_s3_bucket: bucket,
 } = config
-
-// API.configure(config)
 
 const AdminPortalPage = () => {
   const [moduleTest, setModuleTest] = useState([])

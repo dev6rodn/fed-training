@@ -22,7 +22,7 @@ type Question {
 }
 
 type Answer {
-  text: String!
+  text: String
   isCorrect: Boolean!
 }
 
