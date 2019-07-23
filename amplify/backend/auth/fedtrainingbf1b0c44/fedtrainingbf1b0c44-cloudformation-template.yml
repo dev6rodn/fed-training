@@ -12,132 +12,140 @@ Parameters:
   unauthRoleArn:
     Type: String
 
+  
+  
+  
+
     
   identityPoolName:
     Type: String
-              
+                
   allowUnauthenticatedIdentities:
-    Type: String
-          
-  lambdaLogPolicy:
     Type: String
             
   openIdLambdaRoleName:
     Type: String
-            
-  openIdRolePolicy:
+              
+  resourceNameTruncated:
     Type: String
-            
-  openIdLambdaIAMPolicy:
-    Type: String
-            
-  openIdLogPolicy:
-    Type: String
-            
+              
   userPoolName:
     Type: String
-                  
+                      
   autoVerifiedAttributes:
     Type: CommaDelimitedList
       
   mfaConfiguration:
     Type: String
-                  
+                      
   mfaTypes:
     Type: CommaDelimitedList
       
-  roleName:
-    Type: String
-            
-  roleExternalId:
-    Type: String
-            
-  policyName:
-    Type: String
-            
   smsAuthenticationMessage:
     Type: String
-            
+              
   smsVerificationMessage:
     Type: String
-            
+              
   emailVerificationSubject:
     Type: String
-            
+              
   emailVerificationMessage:
     Type: String
-              
+                
   defaultPasswordPolicy:
     Type: String
-              
+                
   passwordPolicyMinLength:
     Type: Number
-              
+                  
   passwordPolicyCharacters:
     Type: CommaDelimitedList
-            
+              
   requiredAttributes:
     Type: CommaDelimitedList
       
   userpoolClientName:
     Type: String
-              
+                
   userpoolClientGenerateSecret:
     Type: String
-              
+                
   userpoolClientRefreshTokenValidity:
     Type: Number
-              
+                  
   userpoolClientWriteAttributes:
     Type: CommaDelimitedList
-            
+              
   userpoolClientReadAttributes:
     Type: CommaDelimitedList
       
   mfaLambdaRole:
     Type: String
-            
-  mfaLambdaLogPolicy:
-    Type: String
-            
-  mfaPassRolePolicy:
-    Type: String
-            
-  mfaLambdaIAMPolicy:
-    Type: String
-            
+              
   userpoolClientLambdaRole:
     Type: String
-            
-  userpoolClientLogPolicy:
+                
+  userpoolClientSetAttributes:
     Type: String
             
+  lambdaLogPolicy:
+    Type: String
+              
+  openIdRolePolicy:
+    Type: String
+              
+  openIdLambdaIAMPolicy:
+    Type: String
+              
+  openIdLogPolicy:
+    Type: String
+              
+  roleName:
+    Type: String
+              
+  roleExternalId:
+    Type: String
+              
+  policyName:
+    Type: String
+              
+  mfaLambdaLogPolicy:
+    Type: String
+              
+  mfaPassRolePolicy:
+    Type: String
+              
+  mfaLambdaIAMPolicy:
+    Type: String
+              
+  userpoolClientLogPolicy:
+    Type: String
+              
   userpoolClientLambdaPolicy:
     Type: String
               
-  userpoolClientSetAttributes:
-    Type: String
-          
   resourceName:
     Type: String
-            
+              
   authSelections:
     Type: String
-                                                    
+                                                              
   useDefault:
     Type: String
-          
+            
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
 
 Resources:
+  
   
   # BEGIN SNS ROLE RESOURCE
   SNSRole: 
   # Created to allow the UserPool SMS Config to publish via the Simple Notification Service during MFA Process
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, !Ref roleName, !Join ['',[!Ref roleName, '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, 'fedtraa0328313_sns-role', !Join ['',['fedtraa0328313_sns-role', '-', !Ref env]]]
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
         Statement: 
@@ -149,10 +157,10 @@ Resources:
               - "sts:AssumeRole"
             Condition: 
               StringEquals:
-                sts:ExternalId: !Ref roleExternalId
+                sts:ExternalId: fedtraa0328313_role_external_id
       Policies: 
         - 
-          PolicyName: !Ref policyName
+          PolicyName: fedtraa0328313-sns-policy
           PolicyDocument: 
             Version: "2012-10-17"
             Statement: 
@@ -179,6 +187,7 @@ Resources:
         
       
       
+      
       AutoVerifiedAttributes: !Ref autoVerifiedAttributes
       
       
@@ -197,8 +206,9 @@ Resources:
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsConfiguration: 
         SnsCallerArn: !GetAtt SNSRole.Arn
-        ExternalId: !Ref roleExternalId 
+        ExternalId: fedtraa0328313_role_external_id
     
+  
   UserPoolClientWeb:
   # Created provide application access to user pool
   # Depends on UserPool for ID reference
@@ -279,7 +289,7 @@ Resources:
   # Marked as depending on UserPoolClientRole for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: !Ref userpoolClientLambdaPolicy
+      PolicyName: fedtraa0328313_userpoolclient_lambda_iam_policy
       Roles: 
         - !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',[!Ref userpoolClientLambdaRole, '-', !Ref env]]]
       PolicyDocument:
@@ -296,7 +306,7 @@ Resources:
   # Marked as depending on UserPoolClientLambdaPolicy for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: !Ref userpoolClientLogPolicy
+      PolicyName: fedtraa0328313_userpoolclient_lambda_log_policy
       Roles: 
         - !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',[!Ref userpoolClientLambdaRole, '-', !Ref env]]]
       PolicyDocument:
@@ -331,7 +341,7 @@ Resources:
     
   # BEGIN IDENTITY POOL RESOURCES
   
-  
+ 
   IdentityPool:
   # Always created
     Type: AWS::Cognito::IdentityPool

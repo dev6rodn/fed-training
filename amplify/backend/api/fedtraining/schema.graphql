@@ -9,6 +9,7 @@ type ModuleTest
   ) {
   id: ID!
   module: String!
+  totalPointsAllowed: Int!
   questions: [Question!]!
 }
 
