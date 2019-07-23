@@ -5,6 +5,7 @@ export const getModuleTest = `query GetModuleTest($id: ID!) {
   getModuleTest(id: $id) {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
@@ -27,6 +28,7 @@ export const listModuleTests = `query ListModuleTests(
     items {
       id
       module
+      totalPointsAllowed
       questions {
         score
         text
@@ -96,11 +98,16 @@ export const searchModuleTests = `query SearchModuleTests(
     items {
       id
       module
+      totalPointsAllowed
       questions {
         score
         text
         resource
         codeImg
+        answers {
+          text
+          isCorrect
+        }
       }
     }
     nextToken

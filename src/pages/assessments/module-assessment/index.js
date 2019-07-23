@@ -5,12 +5,12 @@ import * as queries from '../../../graphql/queries'
 import QuizItem from '../../../components/quiz'
 
 const ModuleAssessment = ({ match }) => {
-  const assessmentName = match.params.assessmentName
+  const { moduleName } = match.params
   return (
     <main>
       <Connect
         query={graphqlOperation(queries.listModuleTests, {
-          filter: { module: { eq: assessmentName } },
+          filter: { id: { eq: moduleName } },
         })}
       >
         {({ data: { listModuleTests }, loading, error }) => {

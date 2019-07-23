@@ -5,6 +5,7 @@ export const onCreateModuleTest = `subscription OnCreateModuleTest {
   onCreateModuleTest {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
@@ -22,6 +23,7 @@ export const onUpdateModuleTest = `subscription OnUpdateModuleTest {
   onUpdateModuleTest {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text
@@ -39,6 +41,7 @@ export const onDeleteModuleTest = `subscription OnDeleteModuleTest {
   onDeleteModuleTest {
     id
     module
+    totalPointsAllowed
     questions {
       score
       text

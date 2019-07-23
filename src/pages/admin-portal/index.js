@@ -1,132 +1,94 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import FormList from '../../components/assessment-form'
+import uuid from 'uuid/v4'
+import { createModuleTest, updateModuleTest } from '../../graphql/mutations'
+import { Storage } from 'aws-amplify'
+import API, { graphqlOperation } from '@aws-amplify/api'
+import config from '../../aws-exports'
+import { modulesConfig } from '../modules-config'
+import { searchModuleTests } from '../../graphql/queries'
+API.configure(config)
+
+const {
+  aws_user_files_s3_bucket_region: region,
+  aws_user_files_s3_bucket: bucket,
+} = config
 
 const AdminPortalPage = () => {
-  const [moduleName, setModuleName] = useState('')
-  const [questionText, setQuestionText] = useState('')
-  const [questionScore, setQuestionScore] = useState(0)
-  const [learningResource, setLearningResource] = useState('')
-  const [codePicUrl, setCodePicUrl] = useState('')
-  const [answer1Text, setAnswer1Text] = useState('')
-  const [answer2Text, setAnswer2Text] = useState('')
-  const [answer3Text, setAnswer3Text] = useState('')
-  const [answer4Text, setAnswer4Text] = useState('')
+  const [moduleTest, setModuleTest] = useState([])
+  const [moduleName, setModuleName] = useState('modern-javascript')
 
-  const [check1, setCheck1] = useState(false)
-  const [check2, setCheck2] = useState(false)
-  const [check3, setCheck3] = useState(false)
-  const [check4, setCheck4] = useState(false)
+  useEffect(() => {
+    API.graphql(
+      graphqlOperation(searchModuleTests, {
+        filter: { id: { eq: moduleName } },
+      })
+    ).then(({ data }) => {
+      const savedQuestions = data.searchModuleTests.items.map(
+        item => item.questions
+      )
 
-  const handleCheck1 = () => setCheck1(!check1)
-  const handleCheck2 = () => setCheck2(!check2)
-  const handleCheck3 = () => setCheck3(!check3)
-  const handleCheck4 = () => setCheck4(!check4)
+      setModuleTest([...savedQuestions][0])
+    })
+  }, [moduleName])
+  const handleFormSubmit = async (file, moduleQuestion) => {
+    const totalPointsAllowed = [...moduleTest, moduleQuestion].reduce(
+      (accum, item) => accum + item.score,
+      0
+    )
 
-  const handleSubmit = () => {}
+    if (file) {
+      const [name, extension] = file.name.split('.')
+      const { type: mimeType } = file
+      const key = `images/${moduleName}-${name}-${uuid()}.${extension}`
+      const url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`
+      moduleQuestion.codeImg = url
 
+      await Storage.put(key, file, {
+        contentType: mimeType,
+      }).catch(err => console.log('Saving img to S3 error: ', err))
+    }
+
+    const inputData = {
+      id: moduleName,
+      module: moduleName,
+      totalPointsAllowed,
+      questions: [...moduleTest, moduleQuestion],
+    }
+
+    await API.graphql(graphqlOperation(updateModuleTest, { input: inputData }))
+      .catch(async err => {
+        console.log('error updating module, attempting to create... ', err)
+        await API.graphql(
+          graphqlOperation(createModuleTest, {
+            input: inputData,
+          })
+        ).catch(err => console.log('error creating module...', err))
+      })
+      .finally(() => {
+        console.log('all done processing, safely turn off spinner.')
+      })
+
+    setModuleTest(oldstate => [...oldstate, moduleQuestion])
+  }
   return (
     <main>
-      <form onSubmit={handleSubmit}>
-        <section>
-          <label>
-            Module Name
-            <input
-              value={moduleName}
-              onChange={e => setModuleName(e.target.value)}
-            />
-          </label>
-        </section>
-        <section>
-          <label>
-            Question Score
-            <input
-              type="number"
-              value={questionScore}
-              onChange={e => setQuestionScore(e.target.value)}
-            />
-          </label>
-        </section>
-        <section>
-          <label>
-            Learning Resource
-            <input
-              value={learningResource}
-              onChange={e => setLearningResource(e.target.value)}
-            />
-          </label>
-        </section>
-        <section>
-          <label>
-            Question
-            <input
-              value={questionText}
-              onChange={e => setQuestionText(e.target.value)}
-            />
-          </label>
-        </section>
-        <section>
-          <label>
-            Code Pic Url
-            <input
-              value={codePicUrl}
-              onChange={e => setCodePicUrl(e.target.value)}
-            />
-          </label>
-        </section>
-        <section>
-          <label>
-            Answer 1
-            <input
-              value={answer1Text}
-              onChange={e => setAnswer1Text(e.target.value)}
-            />
-            <label>
-              correct answer?
-              <input type="checkbox" onChange={handleCheck1} />
-            </label>
-          </label>
-        </section>
-        <section>
-          <label>
-            Answer 2
-            <input
-              value={answer2Text}
-              onChange={e => setAnswer2Text(e.target.value)}
-            />
-            <label>
-              correct answer?
-              <input type="checkbox" onChange={handleCheck2} />
-            </label>
-          </label>
-        </section>
-        <section>
-          <label>
-            Answer 3
-            <input
-              value={answer3Text}
-              onChange={e => setAnswer3Text(e.target.value)}
-            />
-            <label>
-              correct answer?
-              <input type="checkbox" onChange={handleCheck3} />
-            </label>
-          </label>
-        </section>
-        <section>
-          <label>
-            Answer 4
-            <input
-              value={answer4Text}
-              onChange={e => setAnswer4Text(e.target.value)}
-            />
-            <label>
-              correct answer?
-              <input type="checkbox" onChange={handleCheck4} />
-            </label>
-          </label>
-        </section>
-
-        <button>Submit</button>
-      </form>
+      <select
+        value={moduleName}
+        onChange={e => {
+          setModuleName(e.target.value)
+          setModuleTest([])
+        }}
+      >
+        {modulesConfig.map(module => {
+          return (
+            <option key={module.id} value={module.urlName}>
+              {module.name}
+            </option>
+          )
+        })}
+      </select>
+      <FormList handleFormSubmit={handleFormSubmit} />
     </main>
   )
 }

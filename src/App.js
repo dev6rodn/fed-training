@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Auth, Hub } from 'aws-amplify'
+import Amplify, { Auth, Hub } from 'aws-amplify'
 import { Authenticator, AmplifyTheme } from 'aws-amplify-react'
 import { SignUp } from 'aws-amplify-react/dist/Auth'
 import HomePage from './pages/home'
@@ -9,10 +9,10 @@ import JavaScriptTrainingLayout from './pages/modern-javascript'
 import WebDevTrainingLayout from './pages/modern-web-development'
 import ReduxTrainingLayout from './pages/redux'
 import AdminPortalPage from './pages/admin-portal'
-import Amplify from 'aws-amplify'
-import config from './aws-exports'
 import Navbar from './components/navbar'
 import AssessmentsPage from './pages/assessments'
+
+import config from './aws-exports'
 
 Amplify.configure(config)
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import TrainingCardList from './training-card-list'
-import { cardsConfig } from './cards-config'
+import { modulesConfig } from '../modules-config'
 
 const HomePage = () => {
   return (
     <main>
-      <TrainingCardList cardsConfig={cardsConfig} />
+      <TrainingCardList cardsConfig={modulesConfig} />
     </main>
   )
 }
