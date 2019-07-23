@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import answerFormStyles from './formStyles.module.scss'
-const AnswerCheckboxGroup = ({ answers, updateAnswerSubmission }) => {
+const AnswerCheckboxGroup = ({
+  answers,
+  updateAnswerSubmission,
+  submitButtonText,
+}) => {
   const [answersList, setAnswersList] = useState([])
 
   useEffect(() => {
@@ -42,7 +46,7 @@ const AnswerCheckboxGroup = ({ answers, updateAnswerSubmission }) => {
   return (
     <form className={answerFormStyles.content} onSubmit={handleFormSubmit}>
       {checkboxes}
-      <button>Submit</button>
+      <button>{submitButtonText}</button>
     </form>
   )
 }
