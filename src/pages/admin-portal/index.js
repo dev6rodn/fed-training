@@ -5,7 +5,7 @@ import { createModuleTest, updateModuleTest } from '../../graphql/mutations'
 import { Storage } from 'aws-amplify'
 import API, { graphqlOperation } from '@aws-amplify/api'
 import config from '../../aws-exports'
-
+import { modulesConfig } from '../modules-config'
 API.configure(config)
 
 const {
@@ -66,10 +66,13 @@ const AdminPortalPage = () => {
           setModuleTest([])
         }}
       >
-        <option value="modern-javascript">Modern JavaScript</option>
-        <option value="modern-web-development">Modern Web Development</option>
-        <option value="react">React</option>
-        <option value="redux">Redux</option>
+        {modulesConfig.map(module => {
+          return (
+            <option key={module.id} value={module.urlName}>
+              {module.name}
+            </option>
+          )
+        })}
       </select>
       <FormList handleFormSubmit={handleFormSubmit} />
     </main>

@@ -1,4 +1,4 @@
-export const cardsConfig = [
+export const modulesConfig = [
   {
     name: 'Modern JavaScript',
     urlName: 'modern-javascript',
