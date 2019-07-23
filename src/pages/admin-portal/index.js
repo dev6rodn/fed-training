@@ -32,55 +32,30 @@ const AdminPortalPage = () => {
       const url = `https://${bucket}.s3.${region}.amazonaws.com/public/${key}`
       moduleQuestion.codeImg = url
 
-      // await Storage.put(key, file, {
-      //   contentType: mimeType,
-      // }).catch(err => console.log('Saving img to S3 error: ', err))
+      await Storage.put(key, file, {
+        contentType: mimeType,
+      }).catch(err => console.log('Saving img to S3 error: ', err))
     }
-
-    // const inputData = {
-    //   id: moduleName,
-    //   module: moduleName,
-    //   totalPointsAllowed,
-    //   questions: [...moduleTest, moduleQuestion],
-    // }
 
     const inputData = {
-      id: 'react',
-      module: 'react',
-      totalPointsAllowed: 2,
-      questions: [
-        {
-          text: 'Is this react?',
-          codeImg: 'deleteMe.com',
-          resource: 'learning.com',
-          score: 2,
-          answers: [
-            {
-              text: 'yes it is',
-              isCorrect: true,
-            },
-            {
-              text: "no it isn't",
-              isCorrect: false,
-            },
-          ],
-        },
-      ],
+      id: moduleName,
+      module: moduleName,
+      totalPointsAllowed,
+      questions: [...moduleTest, moduleQuestion],
     }
 
-    console.log({ inputData })
-    // await API.graphql(graphqlOperation(updateModuleTest, { input: inputData }))
-    //   .catch(async err => {
-    //     console.log('error updating module, attempting to create... ', err)
-    await API.graphql(
-      graphqlOperation(createModuleTest, {
-        input: inputData,
+    await API.graphql(graphqlOperation(updateModuleTest, { input: inputData }))
+      .catch(async err => {
+        console.log('error updating module, attempting to create... ', err)
+        await API.graphql(
+          graphqlOperation(createModuleTest, {
+            input: inputData,
+          })
+        ).catch(err => console.log('error creating module...', err))
       })
-    ).catch(err => console.log('error creating module...', err))
-    // })
-    // .finally(() => {
-    //   console.log('all done processing, safely turn off spinner.')
-    // })
+      .finally(() => {
+        console.log('all done processing, safely turn off spinner.')
+      })
 
     setModuleTest(oldstate => [...oldstate, moduleQuestion])
   }
