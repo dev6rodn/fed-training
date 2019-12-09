@@ -19,7 +19,7 @@ export default [
     displayName: 'Overview',
     path: '/overview',
     markdown: overviewMarkdown,
-    next: '/firstSteps',
+    next: '/first-steps',
   },
   {
     id: 1,
