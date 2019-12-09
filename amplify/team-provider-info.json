@@ -83,5 +83,22 @@
                 "fedtrainingbf1b0c44": {}
             }
         }
+    },
+    "aqhandoff": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fedtraining-aqhandoff-123145-authRole",
+            "UnauthRoleArn": "arn:aws:iam::885708561671:role/amplify-fedtraining-aqhandoff-123145-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::885708561671:role/amplify-fedtraining-aqhandoff-123145-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-fedtraining-aqhandoff-123145-deployment",
+            "UnauthRoleName": "amplify-fedtraining-aqhandoff-123145-unauthRole",
+            "StackName": "amplify-fedtraining-aqhandoff-123145",
+            "StackId": "arn:aws:cloudformation:us-east-1:885708561671:stack/amplify-fedtraining-aqhandoff-123145/27516cd0-1ab2-11ea-ab90-12da3ecd6186"
+        },
+        "categories": {
+            "auth": {
+                "fedtrainingbf1b0c44": {}
+            }
+        }
     }
 }

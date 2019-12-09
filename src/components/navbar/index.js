@@ -17,14 +17,7 @@ function Navbar({ user, handleSignOut }) {
         {username && (
           <span className={'nav-item'}>Welcome{`, ${username}`}</span>
         )}
-        <Link className={'nav-item'} to="/assessments">
-          Assessments
-        </Link>
-        {userGroups.length > 0 && userGroups.includes('Admin') && (
-          <Link className="nav-item" to="/admin-portal">
-            Admin Portal
-          </Link>
-        )}
+
         <span className={'nav-item'} onClick={handleSignOut}>
           Sign Out
         </span>
