@@ -1,7 +1,5 @@
 # Frontend Training Material
 
-[Live Course Link](https://master.d1izkauzq6r5zu.amplifyapp.com/)
-
 ## Purpose
 
 This project is intended to train modern frontend principles and mechanics to backend developers as it relates to JavaScript.
@@ -14,7 +12,7 @@ This project is intended to train modern frontend principles and mechanics to ba
 
 ## Tech Stack
 
-This application is creating using [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started) and [AWS Amplify](https://aws-amplify.github.io/). Additionally, hosting, and CI/CD pipeline are provided by the [AWS Amplify Console](https://aws.amazon.com/amplify/console/).
+This application is creating using [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started).
 
 Additionally, [codesandbox](https://codesandbox.io) embeds are used to provide code samples.
 
@@ -45,26 +43,6 @@ There should be an strong sense to do the following:
 - Use of emojis, jokes, puns, etc is strongly encouraged to add a personal feel
 - All links to outside content open in a new tab
 
-## Contributing
-
-- Setup the [AWS Amplify CLI](https://aws-amplify.github.io/docs/)
-- Fork this repo and bring it down locally
-- In your local version:
-  - Checkout the `development` branch
-  - run `git checkout -b <YourName-FED-Training>`
-  - Run `amplify init` and follow the prompts
-  - When asked if wanting to use a profile, use a profile if created, otherwise create one
-  - Setup a cognito pool by running `amplify add auth` and accepting all defaults
-  - Ensure that a `aws-exports.js` file was created
-  - Run `amplify console` and select `auth` and select `User Pool`
-- In the AWS Console:
-  - On the right hand side of your User Pool, select `Users and groups`
-  - Select the `Create user` button
-  - Create a user with a complex password
-- Back in your application:
-  - Run `npm start`
-  - On the login screen, enter the newly created user and change is password is prompted.
-
 ## Issues
 
-If any point does not appear correctly, filing an ensure will ensure it gets properly addressed while also helping others who have a similar issue.
+If any point something does not appear correctly, filing an ensure will ensure it gets properly addressed while also helping others who have a similar issue.
