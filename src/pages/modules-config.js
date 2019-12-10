@@ -1,5 +1,11 @@
 export const modulesConfig = [
   {
+    name: 'Hello World',
+    urlName: 'html-basics',
+    id: 0,
+    path: '/html-basics/overview',
+  },
+  {
     name: 'Modern JavaScript',
     urlName: 'modern-javascript',
     id: 1,
