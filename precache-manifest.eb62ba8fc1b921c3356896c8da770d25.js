@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d54b0c519a475131e7e429061277ebc4",
+    "revision": "6eade1f6daeba24ce1b247aaf6a5efed",
     "url": "/fed-training-static/index.html"
   },
   {
-    "revision": "3fbc790c5ef7629bfb0c",
+    "revision": "97e5f4faa35dbc8a5713",
     "url": "/fed-training-static/static/css/main.2e210997.chunk.css"
   },
   {
-    "revision": "fc3d3f2fda3ce6736275",
-    "url": "/fed-training-static/static/js/2.a0e070e9.chunk.js"
+    "revision": "91408873d32149cf1d8a",
+    "url": "/fed-training-static/static/js/2.d4228feb.chunk.js"
   },
   {
-    "revision": "3fbc790c5ef7629bfb0c",
-    "url": "/fed-training-static/static/js/main.6fb9349e.chunk.js"
+    "revision": "97e5f4faa35dbc8a5713",
+    "url": "/fed-training-static/static/js/main.8e52f5ca.chunk.js"
   },
   {
     "revision": "e38c3891b9d8193d07d3",
@@ -80,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fed-training-static/static/media/group-project.de11348b.md"
   },
   {
+    "revision": "02b12823470def54c88de82d0cc45806",
+    "url": "/fed-training-static/static/media/html-basics.02b12823.md"
+  },
+  {
     "revision": "ec1cce4394cffaadf5a07804250c1d49",
     "url": "/fed-training-static/static/media/javascript-in-browser-1.ec1cce43.md"
   },
@@ -118,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3dad6bccb24aa98106a702b3a1038806",
     "url": "/fed-training-static/static/media/overview.3dad6bcc.md"
+  },
+  {
+    "revision": "983c15b0f71993d26fa1e8526a04ee2b",
+    "url": "/fed-training-static/static/media/overview.983c15b0.md"
   },
   {
     "revision": "dda41e80f4b37e50d8088b03bcd983d5",
