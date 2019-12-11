@@ -7,6 +7,7 @@ import WebDevTrainingLayout from './pages/modern-web-development'
 import ReduxTrainingLayout from './pages/redux'
 import Navbar from './components/navbar'
 import HelloWorldPage from './pages/hello-world'
+import TestingSpas from './pages/testing-spas'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         component={WebDevTrainingLayout}
       />
       <Route path="/redux/:page" component={ReduxTrainingLayout} />
+      <Route path="/testing-spas/:page" component={TestingSpas} />
     </Router>
   )
 }
