@@ -13,7 +13,8 @@ export default [
     displayName: 'HTML Basics',
     path: '/html-basics',
     markdown: HTMLBasicsMarkdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/static-r65o1?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/shy-thunder-u4udb?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/overview',
   },
 ]

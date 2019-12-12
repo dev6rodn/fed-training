@@ -35,7 +35,7 @@ export default [
     path: '/functions',
     markdown: functionsMarkdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/zr9wj0o6kl?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/functions-gnls7?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/overview',
     next: '/objects',
   },
@@ -45,7 +45,7 @@ export default [
     path: '/objects',
     markdown: objectsMarkdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/13n0970vml?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/objects-nvlv4?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/functions',
     next: '/arrays',
   },
@@ -55,7 +55,7 @@ export default [
     path: '/arrays',
     markdown: arraysMarkdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/3v165v805?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/arrays-ly6jn?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/objects',
     next: '/javascript-in-the-browser-1',
   },
@@ -65,7 +65,7 @@ export default [
     path: '/javascript-in-the-browser-1',
     markdown: browserJSPart1Markdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/zrznv23xl?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/javascript-in-the-browser-part-1-k5ylb?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/arrays',
     next: '/javascript-in-the-browser-2',
   },
@@ -74,7 +74,8 @@ export default [
     displayName: 'JavaScript in the Browser: part 2',
     path: '/javascript-in-the-browser-2',
     markdown: browserJSPart2Markdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/ypnpr0rzvv?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/javascript-in-the-browser-part-2-82zmn?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/javascript-in-the-browser-1',
     next: '/async-js-1',
   },
@@ -84,7 +85,7 @@ export default [
     path: '/async-js-1',
     markdown: asyncJSMarkdownPart1,
     codesandboxUrl:
-      'https://codesandbox.io/embed/k35w0nv003?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/async-js-1-ggu00?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/javascript-in-the-browser-2',
     next: '/async-js-2',
   },
@@ -94,7 +95,7 @@ export default [
     path: '/async-js-2',
     markdown: asyncJSMarkdownPart2,
     codesandboxUrl:
-      'https://codesandbox.io/embed/mm457lvjmp?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/async-js-2-z83jv?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/async-js-1',
     next: '/function-composition',
   },
@@ -104,7 +105,7 @@ export default [
     path: '/function-composition',
     markdown: functionCompositionMarkdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/wom9yv00jw?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/function-composition-epsrn?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/async-js-2',
     next: '/module-challenge',
   },
@@ -114,7 +115,8 @@ export default [
     path: '/module-challenge',
     markdown: moduleChallengeMarkdown,
     previous: '/function-composition',
-    codesandboxUrl: 'https://codesandbox.io/embed/nxk0rj5wm?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/module-challenge-gz1sw?fontsize=14&hidenavigation=1&theme=dark',
     next: '/async-await',
   },
   {
@@ -125,7 +127,7 @@ export default [
     previous: '/module-challenge',
     next: '/understanding-this',
     codesandboxUrl:
-      'https://codesandbox.io/embed/asyncawait-5cey1?expanddevtools=1&fontsize=14&view=editor',
+      'https://codesandbox.io/embed/async-await-o97on?fontsize=14&hidenavigation=1&theme=dark',
   },
   {
     id: 12,
@@ -141,6 +143,6 @@ export default [
     markdown: groupProjectMarkdown,
     previous: '/understanding-this',
     codesandboxUrl:
-      'https://codesandbox.io/embed/chartjs-project-lyd1k?fontsize=14',
+      'https://codesandbox.io/embed/chartjs-project-cn6dh?fontsize=14&hidenavigation=1&theme=dark',
   },
 ]

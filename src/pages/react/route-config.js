@@ -37,7 +37,8 @@ export default [
     displayName: 'Intro to Components',
     path: '/components-intro',
     markdown: componentsIntroMarkdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/2439x2v9j0?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/basic-components-jzold?fontsize=14&hidenavigation=1&theme=dark',
     next: '/composition',
     previous: '/setup',
   },
@@ -46,7 +47,8 @@ export default [
     displayName: 'Composition',
     path: '/composition',
     markdown: compositionMarkdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/2jx937w3jy?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/composition-v52lg?fontsize=14&hidenavigation=1&theme=dark',
     next: '/props',
     previous: '/components-intro',
   },
@@ -55,7 +57,8 @@ export default [
     displayName: 'Props',
     path: '/props',
     markdown: propsMarkdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/o488v4rm5z?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/props-qehke?fontsize=14&hidenavigation=1&theme=dark',
     next: '/state',
     previous: '/props',
   },
@@ -64,7 +67,8 @@ export default [
     displayName: 'State',
     path: '/state',
     markdown: stateMarkdown,
-    codesandboxUrl: 'https://codesandbox.io/embed/lrkoqyj0lm?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/state-2fdo3?fontsize=14&hidenavigation=1&theme=dark',
     next: '/gif-loader-functional',
     previous: '/props',
   },
@@ -73,7 +77,8 @@ export default [
     displayName: 'Project: Gif Loader',
     path: '/gif-loader-functional',
     markdown: gifLoaderFunctional,
-    codesandboxUrl: 'https://codesandbox.io/embed/x3l536r82z?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/lifecycle-and-data-fetching-m6l0n?fontsize=14&hidenavigation=1&theme=dark',
     next: '/module-challenge',
     previous: '/state',
   },
@@ -82,7 +87,8 @@ export default [
     displayName: '🚨 Module Challenge 🚨',
     path: '/module-challenge',
     markdown: moduleChallenge,
-    codesandboxUrl: 'https://codesandbox.io/embed/yw6kvn18z1?fontsize=14',
+    codesandboxUrl:
+      'https://codesandbox.io/embed/module-challenge-uqwdj?fontsize=14&hidenavigation=1&theme=dark',
     previous: '/gif-loader-functional',
   },
 ]

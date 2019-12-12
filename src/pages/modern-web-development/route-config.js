@@ -18,7 +18,7 @@ export default [
     path: '/modularizing-code',
     markdown: modularizingDevelopmentMarkdown,
     codesandboxUrl:
-      'https://codesandbox.io/embed/o89n31k3y?expanddevtools=1&fontsize=14&hidenavigation=1',
+      'https://codesandbox.io/embed/modularizing-code-gtm0y?fontsize=14&hidenavigation=1&theme=dark',
     next: '/js-setup',
     previous: '/overview',
   },
